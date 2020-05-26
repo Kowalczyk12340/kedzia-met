@@ -13,7 +13,7 @@ const Menu = styled.div`
   }
 
   /* Style the links inside the navigation bar */
-  .topnav a {
+  .topnav .navlink {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -24,14 +24,15 @@ const Menu = styled.div`
   }
 
   /* Change the color of links on hover */
-  .topnav a:hover {
+  .topnav .navlink:hover {
     background-color: #ddd;
     color: black;
   }
 
   /* Add an active class to highlight the current page */
-  .topnav a.active {
+  .topnav .active {
     background-color: #4caf50;
+    float: left;
     color: white;
   }
 
@@ -41,12 +42,15 @@ const Menu = styled.div`
   }
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
   @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
+    .topnav .navlink:not(:first-child) {
       display: none;
     }
-    .topnav a.icon {
+    .topnav .icon {
       float: right;
       display: block;
+    }
+    .topnav .active {
+      margin: 0 auto;
     }
   }
 
@@ -55,12 +59,12 @@ const Menu = styled.div`
     .topnav.responsive {
       position: relative;
     }
-    .topnav.responsive a.icon {
+    .topnav.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    .topnav.responsive a {
+    .topnav.responsive .navlink {
       float: none;
       display: block;
       text-align: left;
@@ -69,23 +73,29 @@ const Menu = styled.div`
 `;
 //<FontAwesomeIcon icon={faBars}
 export const Navbar = () => {
-  const [toggleMenu, displayMenu] = useState(false);
+  const [toggleMenu, displayMenu] = useState(true);
   return (
     <Menu>
       <div className={toggleMenu ? "topnav" : "topnav responsive"}>
-        <a href="#home" class="active">
-          Home
-        </a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a
-          href="javascript:void(0);"
-          class="icon"
-          onclick={() => displayMenu(!toggleMenu)}
-        >
-          <i class="fa fa-bars"></i>
-        </a>
+        <Link to="/" className="active">
+          LOGO
+        </Link>
+        <Link to="/modernization" className="navlink">
+          Modernizacja
+        </Link>
+        <Link to="/orders" className="navlink">
+          Zamówienia
+        </Link>
+        <Link to="/gallery" className="navlink">
+          Galeria
+        </Link>
+        <Link to="/contact" className="navlink">
+          Kontakt
+        </Link>
+
+        <Link className="icon" onClick={() => displayMenu(!toggleMenu)}>
+          <i className="fa fa-bars"></i>
+        </Link>
       </div>
     </Menu>
   );
