@@ -1,22 +1,30 @@
 import React, { Fragment, useState } from "react";
-import ResponsiveMenu from "react-responsive-navbar";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import logo from "../../images/kedzia.png";
 
 const Menu = styled.div`
   /* Add a black background color to the top navigation */
   .topnav {
-    background-color: #333;
+    background-color: #262626;
     overflow: hidden;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-image: linear-gradient(
+      to right,
+      #232526 0%,
+      #414345 51%,
+      #232526 100%
+    );
+  }
+  .topnav:hover {
+    background-position: right center;
   }
 
-  /* Style the links inside the navigation bar */
+  /* Style the link inside the navigation bar */
   .topnav .navlink {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #d9d9d9;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -25,15 +33,15 @@ const Menu = styled.div`
 
   /* Change the color of links on hover */
   .topnav .navlink:hover {
-    background-color: #ddd;
-    color: black;
+    color: #ffffff;
   }
 
   /* Add an active class to highlight the current page */
   .topnav .active {
-    background-color: #4caf50;
+    height: 24px;
+    width: auto;
+    padding: 10px;
     float: left;
-    color: white;
   }
 
   /* Hide the link that should open and close the topnav on small screens */
@@ -48,6 +56,9 @@ const Menu = styled.div`
     .topnav .icon {
       float: right;
       display: block;
+      color: white;
+      margin-top: 10px;
+      margin-right: 10px;
     }
     .topnav .active {
       margin: 0 auto;
@@ -71,14 +82,13 @@ const Menu = styled.div`
     }
   }
 `;
-//<FontAwesomeIcon icon={faBars}
 export const Navbar = () => {
   const [toggleMenu, displayMenu] = useState(true);
   return (
     <Menu>
       <div className={toggleMenu ? "topnav" : "topnav responsive"}>
-        <Link to="/" className="active">
-          LOGO
+        <Link to="/">
+          <img className="active" src={logo} />
         </Link>
         <Link to="/modernization" className="navlink">
           Modernizacja
