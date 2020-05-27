@@ -6,6 +6,7 @@ import { Contact } from "./components/contact/Contact";
 import { Gallery } from "./components/gallery/Gallery";
 import { Orders } from "./components/orders/Orders";
 import { Modernization } from "./components/modernization/Modernization";
+import { Footer } from "./components/layout/Footer";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/orders" component={Orders} />
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
