@@ -48,6 +48,9 @@ const LandingContainer = styled.div`
     flex: 40%;
     padding: 5px;
   }
+  .photo-item {
+    width: 100%;
+  }
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 720px) {
     .column {
@@ -58,13 +61,18 @@ const LandingContainer = styled.div`
       width: 80%;
       margin: 0 auto;
     }
+    .fb-txt {
+      text-align: center;
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
 `;
 
 export const Landing = () => {
   return (
     <LandingContainer>
-      <h1>KEDZIA-MET</h1>
+      <h1>KĘDZIA-MET</h1>
       <h3>Zapraszamy do odwiedzenia naszej strony!</h3>
       <div className="row">
         <div className="column">
@@ -78,10 +86,12 @@ export const Landing = () => {
           </p>
         </div>
         <div className="column">
-          <img src={photo} alt="Snow" style={{ width: "100%" }} />
+          <img className="photo-item" src={photo} />
         </div>
       </div>
       <FontAwesomeIcon icon={faFacebookF} />
+      <br />
+      <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
     </LandingContainer>
   );
 };
