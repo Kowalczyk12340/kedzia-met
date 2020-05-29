@@ -52,6 +52,7 @@ export const PhotoGallery = () => {
   return (
     <GalleryContainer>
       <div className="gallery-container">
+        <h1>Sprawdź nasze prace!</h1>
         <Gallery images={IMAGES} />
       </div>
     </GalleryContainer>
