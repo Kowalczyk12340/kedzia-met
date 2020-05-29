@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
 import { Landing } from "./components/landing/Landing";
 import { Contact } from "./components/contact/Contact";
-import { Gallery } from "./components/gallery/Gallery";
+import { PhotoGallery } from "./components/gallery/PhotoGallery";
 import { Orders } from "./components/orders/Orders";
 import { Modernization } from "./components/modernization/Modernization";
 import { Footer } from "./components/layout/Footer";
@@ -18,7 +18,7 @@ function App() {
         <Switch>
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/modernization" component={Modernization} />
-          <Route exact path="/gallery" component={Gallery} />
+          <Route exact path="/gallery" component={PhotoGallery} />
           <Route exact path="/orders" component={Orders} />
         </Switch>
       </Router>
