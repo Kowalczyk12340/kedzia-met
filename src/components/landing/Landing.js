@@ -4,14 +4,14 @@ import logo from "../../images/kedzia.png";
 import photo from "../../images/spawacz.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import logo1 from "../../images/kedzia.png";
+import { Link } from "react-router-dom";
 
 const LandingContainer = styled.div`
-  h1 {
-    text-align: center;
-    text-shadow: grey;
-    font-weight: bold;
-    font-size: 34px;
-    text-decoration: underline;
+  .header {
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
   }
   h3 {
     text-align: center;
@@ -51,6 +51,10 @@ const LandingContainer = styled.div`
   .photo-item {
     width: 100%;
   }
+  .fb-txt {
+    text-align: center;
+    font-weight: bold;
+  }
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 720px) {
     .column {
@@ -64,7 +68,6 @@ const LandingContainer = styled.div`
     .fb-txt {
       text-align: center;
       font-weight: bold;
-      text-decoration: underline;
     }
   }
 `;
@@ -72,7 +75,9 @@ const LandingContainer = styled.div`
 export const Landing = () => {
   return (
     <LandingContainer>
-      <h1>KĘDZIA-MET</h1>
+      <Link to="/">
+        <img className="header" src={logo1} />
+      </Link>
       <h3>Zapraszamy do odwiedzenia naszej strony!</h3>
       <div className="row">
         <div className="column">
@@ -89,7 +94,9 @@ export const Landing = () => {
           <img className="photo-item" src={photo} />
         </div>
       </div>
-      <FontAwesomeIcon icon={faFacebookF} />
+      <a href="https://www.facebook.com/">
+        <FontAwesomeIcon icon={faFacebookF} />
+      </a>
       <br />
       <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
     </LandingContainer>
