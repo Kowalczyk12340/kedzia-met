@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 
 const LandingContainer = styled.div`
   .header {
-    margin: 0 auto;
-    width: 80%;
+    width: 50%;
     height: auto;
+    margin: 25px 0 auto;
   }
   h3 {
     text-align: center;
@@ -68,6 +68,11 @@ const LandingContainer = styled.div`
     .fb-txt {
       text-align: center;
       font-weight: bold;
+    }
+  }
+  @media screen and (min-width: 1020px) {
+    .header {
+      width: 30%;
     }
   }
 `;
