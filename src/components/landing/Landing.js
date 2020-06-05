@@ -98,12 +98,18 @@ export const Landing = () => {
         <div className="row">
           <div className="column">
             <p>
-              Nasza firma zajmuje się szeroko pojętą modernizacją, mechaniką,
-              oraz budową i renowacją maszyn rolniczych. Realizujemy także
-              zamówienia dotyczące różnych maszyn, oraz ich części. Jesteśmy
-              uznaną i godną zaufania firmą na lokalnym rynku. Więcej informacji
-              uzyskacie Państwo na tej stronie internetowej lub na naszym
-              fanpage-u na Facebooku, do którego odnośnik jest poniżej.
+              Nasza firma została założona w październiku 2013 roku. Pomysł
+              narodził się w małym garażu. Z czasem widać było spore
+              zainteresowanie naszą działalnością i ciągły wzrost nowych
+              klientów. Postanowiliśmy się więc rozbudować i w ten sposób
+              poszerzyć zakres naszych usług. Wszystko co robimy jest z myślą o
+              naszych odbiorcach. Staramy się by każdy z nich był zadowolony.
+              Wszystkie nasze maszyny wykonujemy bardzo dokładnie z dużą
+              dbałością o szczegóły. Jakość i trwałość naszych usług podwyższa
+              fakt, że wszystkie elementy są piaskowane. Nasza firma wykonuje
+              również specjalne zamówienia naszych klientów lub oferujemy
+              maszyny przez nas już wykonane, które znajdziecie państwo na
+              naszej stronie.
             </p>
           </div>
           <div className="column">
