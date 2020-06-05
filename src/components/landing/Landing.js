@@ -8,6 +8,17 @@ import logo1 from "../../images/kedzia.png";
 import { Link } from "react-router-dom";
 
 const LandingContainer = styled.div`
+  .mainContainer {
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    opacity: 0.8;
+    padding: 1em;
+    border-radius: 5%;
+  }
+
   .header {
     width: 50%;
     height: auto;
@@ -80,30 +91,32 @@ const LandingContainer = styled.div`
 export const Landing = () => {
   return (
     <LandingContainer>
-      <Link to="/">
-        <img className="header" src={logo1} />
-      </Link>
-      <h3>Zapraszamy do odwiedzenia naszej strony!</h3>
-      <div className="row">
-        <div className="column">
-          <p>
-            Nasza firma zajmuje się szeroko pojętą modernizacją, mechaniką, oraz
-            budową i renowacją maszyn rolniczych. Realizujemy także zamówienia
-            dotyczące różnych maszyn, oraz ich części. Jesteśmy uznaną i godną
-            zaufania firmą na lokalnym rynku. Więcej informacji uzyskacie
-            Państwo na tej stronie internetowej lub na naszym fanpage-u na
-            Facebooku, do którego odnośnik jest poniżej.
-          </p>
+      <div className="mainContainer">
+        <Link to="/">
+          <img className="header" src={logo1} />
+        </Link>
+        <h3>Zapraszamy do odwiedzenia naszej strony!</h3>
+        <div className="row">
+          <div className="column">
+            <p>
+              Nasza firma zajmuje się szeroko pojętą modernizacją, mechaniką,
+              oraz budową i renowacją maszyn rolniczych. Realizujemy także
+              zamówienia dotyczące różnych maszyn, oraz ich części. Jesteśmy
+              uznaną i godną zaufania firmą na lokalnym rynku. Więcej informacji
+              uzyskacie Państwo na tej stronie internetowej lub na naszym
+              fanpage-u na Facebooku, do którego odnośnik jest poniżej.
+            </p>
+          </div>
+          <div className="column">
+            <img className="photo-item" src={photo} />
+          </div>
         </div>
-        <div className="column">
-          <img className="photo-item" src={photo} />
-        </div>
+        <a href="https://www.facebook.com/">
+          <FontAwesomeIcon icon={faFacebookF} />
+        </a>
+        <br />
+        <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
       </div>
-      <a href="https://www.facebook.com/">
-        <FontAwesomeIcon icon={faFacebookF} />
-      </a>
-      <br />
-      <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
     </LandingContainer>
   );
 };

@@ -49,7 +49,7 @@ const Menu = styled.div`
     display: none;
   }
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .topnav .navlink:not(:first-child) {
       display: none;
     }
@@ -66,7 +66,7 @@ const Menu = styled.div`
   }
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .topnav.responsive {
       position: relative;
     }
@@ -91,10 +91,10 @@ export const Navbar = () => {
           <img className="active" src={logo} />
         </Link>
         <Link to="/modernization" className="navlink">
-          Modernizacja
+          Oferta modernizacji
         </Link>
         <Link to="/orders" className="navlink">
-          Zamówienia
+          Oferta zamówień
         </Link>
         <Link to="/gallery" className="navlink">
           Galeria
