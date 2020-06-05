@@ -8,6 +8,17 @@ const Map = ReactMapboxGl({
 });
 
 const ContactData = styled.div`
+  .contactContainer {
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    opacity: 0.9;
+    padding: 1em;
+    border-radius: 5%;
+  }
+
   .wrapper {
     overflow: hidden;
     width: 90%;
@@ -64,43 +75,45 @@ const ContactData = styled.div`
 export const Contact = () => {
   return (
     <ContactData>
-      <div className="wrapper">
-        <div className="contact-data">
-          <h1>Dane Kontaktowe</h1>
-          <h2>ZPHU KĘDZIA-MET</h2>
-          <h3>Marek Kędzia</h3>
-          <h3>Dział modernizacji:</h3>
-          <p>Numer telefonu: 608 473 406</p>
-          <h3>Dział Zamówień</h3>
-          <p>Numer telefonu: 739 082 982</p>
-          <h3>Adres E-mail:</h3>
-          <a className="contactDetails" href="#">
-            kedzia-met@wp.pl
-          </a>
-          <h3>Adres firmy:</h3>
-          <p>
-            Wacławów 24
-            <br /> 98-215 Goszczanów
-          </p>
-        </div>
-        <div className="map">
-          <Map
-            style="mapbox://styles/mapbox/streets-v9"
-            containerStyle={{
-              height: "100vh",
-              width: "100vw",
-            }}
-            center={[18.547944, 51.738649]}
-            zoom={[13]}
-          >
-            <Layer
-              type="symbol"
-              id="marker"
-              layout={{ "icon-image": "marker-15" }}
+      <div className="contactContainer">
+        <div className="wrapper">
+          <div className="contact-data">
+            <h1>Dane Kontaktowe</h1>
+            <h2>ZPHU KĘDZIA-MET</h2>
+            <h3>Dział modernizacji:</h3>
+            <p>
+              <h7>Marek Kędzia</h7>
+              <br /> Numer telefonu: 608 473 406
+            </p>
+            <h3>Dział zamówień:</h3>
+            <p>
+              <h7>Mateusz Kędzia</h7>
+              <br /> Numer telefonu: 739 082 982
+            </p>
+            <h3>Firmowy Adres E-mail:</h3>
+            <a className="contactDetails" href="#">
+              kedzia-met@wp.pl
+            </a>
+          </div>
+          <div className="map">
+            <Map
+              style="mapbox://styles/mapbox/streets-v9"
+              containerStyle={{
+                height: "100vh",
+                width: "100vw",
+              }}
+              center={[18.547944, 51.738649]}
+              zoom={[13]}
             >
-              <Feature coordinates={[18.547944, 51.753849]} />
-            </Layer>
-          </Map>
+              <Layer
+                type="symbol"
+                id="marker"
+                layout={{ "icon-image": "marker-15" }}
+              >
+                <Feature coordinates={[18.547944, 51.753849]} />
+              </Layer>
+            </Map>
+          </div>
         </div>
       </div>
     </ContactData>
