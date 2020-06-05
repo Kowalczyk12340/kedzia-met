@@ -3,6 +3,15 @@ import styled from "styled-components";
 import Gallery from "react-grid-gallery";
 
 const GalleryContainer = styled.div`
+  .text-container {
+    background: white;
+    margin: 0 auto;
+    opacity: 0.9;
+    padding: 1em;
+    border-radius: 5%;
+    margin-bottom: 1em;
+  }
+
   h1 {
     text-align: center;
     text-shadow: grey;
@@ -421,48 +430,73 @@ export const PhotoGallery = () => {
   return (
     <GalleryContainer>
       <div className="gallery-container">
-        <h1>Sprawdź efekty naszej pracy!</h1>
-        <h3>Przyczepy</h3>
+        <div className="text-container">
+          <h1>Sprawdź efekty naszej pracy!</h1>
+          <h3>Przyczepy</h3>
+        </div>
         <Gallery images={IMAGES} />
       </div>
       <div className="gallery-container">
         <br />
-        <h3>Przyczepy do Bali</h3>
+        <div className="text-container">
+          <h3>Przyczepy do Bali</h3>
+        </div>
         <Gallery images={IMAGES1} />
       </div>
       <div className="gallery-container">
         <br />
-        <h3>Sadzarki</h3>
+        <div className="text-container">
+          <h3>Sadzarki</h3>
+        </div>
+
         <Gallery images={IMAGES2} />
       </div>
       <div className="gallery-container">
         <br />
-        <h3>Wały</h3>
+        <div className="text-container">
+          <h3>Wały</h3>
+        </div>
+
         <Gallery images={IMAGES3} />
       </div>
       <div className="gallery-container">
         <br />
-        <h3>Formator Zagonów</h3>
+        <div className="text-container">
+          <h3>Formator Zagonów</h3>
+        </div>
+
         <Gallery images={IMAGES4} />
       </div>
       <div className="gallery-container">
         <br />
-        <h3>Zamiatarki</h3>
+        <div className="text-container">
+          <h3>Zamiatarki</h3>
+        </div>
+
         <Gallery images={IMAGES5} />
       </div>
       <div className="gallery-container">
         <br />
-        <h3>Podgarniacz Ślimakowy</h3>
+        <div className="text-container">
+          <h3>Podgarniacz Ślimakowy</h3>
+        </div>
+
         <Gallery images={IMAGES6} />
       </div>
       <div className="gallery-container">
         <br />
-        <h3>Podgarniacz Kołowy</h3>
+        <div className="text-container">
+          <h3>Podgarniacz Kołowy</h3>
+        </div>
+
         <Gallery images={IMAGES7} />
       </div>
       <div className="gallery-container">
         <br />
-        <h3>Inne maszyny i konstrukcje</h3>
+        <div className="text-container">
+          <h3>Inne maszyny i konstrukcje</h3>
+        </div>
+
         <Gallery images={IMAGES8} />
       </div>
       <br />
