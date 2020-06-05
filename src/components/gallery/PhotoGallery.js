@@ -159,7 +159,6 @@ export const PhotoGallery = () => {
         <Gallery images={IMAGES2} />
       </div>
       <br />
-      <h3>Zapraszamy do współpracy!</h3>
     </GalleryContainer>
   );
 };

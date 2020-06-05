@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import przyczepa from "../../images/przyczepa.jpg";
+import przyczepa1 from "../../images/przyczepa1.jpg";
+import sadzarka from "../../images/sadzarka.JPG";
+import wal from "../../images/wal.jpg";
 
 const ModernizationItem = styled.div`
   h1 {
@@ -13,7 +17,7 @@ const ModernizationItem = styled.div`
     text-align: center;
     text-shadow: grey;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 28px;
     text-decoration: none;
   }
   p {
@@ -31,6 +35,12 @@ const ModernizationItem = styled.div`
     color: black;
     margin-top: 10px;
   }
+  .photopage {
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+  }
 `;
 
 export const Modernization = () => {
@@ -39,18 +49,20 @@ export const Modernization = () => {
       <div className="modernizationContainer">
         <h1>Dział Modernizacji</h1>
         <p>
-          Firma Kędzia-Met oferuje przede wszystkim profesjonalne usługi
-          modernizacyjne. Jesteśmy na rynku lokalnym od 2012 roku. Oferujemy
-          profesjonalne usługi w dziedzinie renowacji maszyn wszelakiego typu,
-          takie jak zamiatarki, przyczepy, podgarniacze.
+          Maszyny wykonywane są pod zamówienie klienta. Są to w większości
+          maszyny modernizowane. Wszystkie elementy są dokładnie piaskowane co
+          wpływa na jakość i trwałość wykonanej usługi. Szczegóły techniczne do
+          uzgodnienia.
         </p>
-        <h3>Oferujemy ciekawą listę produktów do usług modernizacyjnych: </h3>
-        <li className="product"> Produkt</li>
-        <li className="product"> Produkt</li>
-        <li className="product"> Produkt</li>
-        <li className="product"> Produkt</li>
-        <li className="product"> Produkt</li>
-        <li className="product"> Produkt</li>
+        <h3>Przyczepy Rolnicze</h3>
+        <img className="photopage" src={przyczepa} />
+        <h3>Przyczepy do Bali</h3>
+        <img className="photopage" src={przyczepa1} />
+        <h3>Sadzarka</h3>
+        <img className="photopage" src={sadzarka} />
+        <h3>Wały</h3>
+        <img className="photopage" src={wal} />
+        <h3>Zapraszamy do współpracy!</h3>
       </div>
     </ModernizationItem>
   );

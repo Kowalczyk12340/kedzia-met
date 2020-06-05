@@ -68,20 +68,20 @@ export const Contact = () => {
         <div className="contact-data">
           <h1>Dane Kontaktowe</h1>
           <h2>ZPHU KĘDZIA-MET</h2>
+          <h3>Marek Kędzia</h3>
           <h3>Dział modernizacji:</h3>
-          <p>
-            <h7>Marek Kędzia</h7>
-            <br /> Numer telefonu: 608 473 406
-          </p>
-          <h3>Dział zamówień:</h3>
-          <p>
-            <h7>Mateusz Kędzia</h7>
-            <br /> Numer telefonu: 739 082 982
-          </p>
-          <h3>Firmowy Adres E-mail:</h3>
+          <p>Numer telefonu: 608 473 406</p>
+          <h3>Dział Zamówień</h3>
+          <p>Numer telefonu: 739 082 982</p>
+          <h3>Adres E-mail:</h3>
           <a className="contactDetails" href="#">
             kedzia-met@wp.pl
           </a>
+          <h3>Adres firmy:</h3>
+          <p>
+            Wacławów 24
+            <br /> 98-215 Goszczanów
+          </p>
         </div>
         <div className="map">
           <Map
