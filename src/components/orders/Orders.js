@@ -96,7 +96,11 @@ export const Orders = () => {
     <LandingOrders>
       <div className="ordersContainer">
         <h1>Oferta zamówień</h1>
-        <h3>Formator Zagonów</h3>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Formator Zagonów
+          </Link>
+        </h3>
         <img className="photopage" src={formator} />
         <p className="description">
           Maszyna służy do formowania zagonów i rozwijania agrowłókniny lub
@@ -107,7 +111,11 @@ export const Orders = () => {
           <br /> - szerokość zagonu w przedziale 70-80cm. <br />- wysokość
           zagonu w przedziale 10-15cm.
         </p>
-        <h3>Podgarniacz Ślimakowy</h3>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Podgarniacz Ślimakowy
+          </Link>
+        </h3>
         <img className="photopage" src={podgarniacz1} />
         <p className="description">
           Maszyna przeznaczona do podgarniania paszy, której zaletą jest jej
@@ -126,12 +134,20 @@ export const Orders = () => {
           <br />
           <b>Możliwość przystosowania maszyny na potrzeby klienta.</b>
         </p>
-        <h3>Podgarniacz Kołowy</h3>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Podgarniacz Kołowy
+          </Link>
+        </h3>
         <img className="photopage" src={podgarniacz2} />
         <p className="description">
           <h3>Wykonywany pod indywidualne zamówienie.</h3>
         </p>
-        <h3>Zamiatarka</h3>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Zamiatarki
+          </Link>
+        </h3>
         <img className="photopage" src={zamiatarka} />
         <p className="description">
           Nasz firma oferuje również szeroki wybór zamiatarek i odmiatarek
@@ -140,10 +156,15 @@ export const Orders = () => {
           wyposażone w układ zmiany kąta pracy, kosz, układ zraszania, szczotkę
           boczną oraz kompensację docisku.
         </p>
-        <h3>Inne nasze przykładowe konstrukcje</h3>
+        <h3>
+          {" "}
+          <Link className="add" to="/gallery" className="add">
+            Inne nasze przykładowe konstrukcje
+          </Link>
+        </h3>
         <img className="photopage" src={konstrukcja} />
         <p className="description">
-          <h3>Wykonywany pod indywidualne zamówienie.</h3>
+          <h3>Wykonywane pod indywidualne zamówienie.</h3>
         </p>
         <p>
           I znacznie więcej! Więcej informacji co do zamówień uzyskacie Państwo

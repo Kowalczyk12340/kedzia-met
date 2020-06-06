@@ -3,6 +3,16 @@ import styled from "styled-components";
 import Gallery from "react-grid-gallery";
 
 const GalleryContainer = styled.div`
+  .mainContainer {
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    opacity: 0.8;
+    padding: 1em;
+    border-radius: 5%;
+  }
   .text-container {
     background: white;
     margin: 0 auto;
@@ -10,6 +20,7 @@ const GalleryContainer = styled.div`
     padding: 1em;
     border-radius: 5%;
     margin-bottom: 1em;
+    text-align: justify;
   }
 
   h1 {
@@ -29,7 +40,7 @@ const GalleryContainer = styled.div`
   }
   .gallery-container {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 1em;
     display: grid;
   }
@@ -331,6 +342,34 @@ const IMAGES5 = [
     thumbnailHeight: 186,
     caption: "Tytul",
   },
+  {
+    src: "https://imgur.com/zKTZAJA.jpg",
+    thumbnail: "https://imgur.com/zKTZAJA.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 186,
+    caption: "Tytul",
+  },
+  {
+    src: "https://imgur.com/p58I14u.jpg",
+    thumbnail: "https://imgur.com/p58I14u.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 186,
+    caption: "Tytul",
+  },
+  {
+    src: "https://imgur.com/Ky8Shp9.jpg",
+    thumbnail: "https://imgur.com/Ky8Shp9.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 186,
+    caption: "Tytul",
+  },
+  {
+    src: "https://imgur.com/ln9ocwp.jpg",
+    thumbnail: "https://imgur.com/ln9ocwp.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 186,
+    caption: "Tytul",
+  },
 ];
 
 const IMAGES6 = [
@@ -429,77 +468,79 @@ const IMAGES8 = [
 export const PhotoGallery = () => {
   return (
     <GalleryContainer>
-      <div className="gallery-container">
-        <div className="text-container">
-          <h1>Sprawdź efekty naszej pracy!</h1>
-          <h3>Przyczepy</h3>
+      <div className="mainContainer">
+        <div className="gallery-container">
+          <div className="text-container">
+            <h1>Sprawdź efekty naszej pracy!</h1>
+            <h3>Przyczepy</h3>
+          </div>
+          <Gallery images={IMAGES} />
         </div>
-        <Gallery images={IMAGES} />
-      </div>
-      <div className="gallery-container">
-        <br />
-        <div className="text-container">
-          <h3>Przyczepy do Bali</h3>
+        <div className="gallery-container">
+          <br />
+          <div className="text-container">
+            <h3>Przyczepy do Bali</h3>
+          </div>
+          <Gallery images={IMAGES1} />
         </div>
-        <Gallery images={IMAGES1} />
-      </div>
-      <div className="gallery-container">
-        <br />
-        <div className="text-container">
-          <h3>Sadzarki</h3>
-        </div>
+        <div className="gallery-container">
+          <br />
+          <div className="text-container">
+            <h3>Sadzarki</h3>
+          </div>
 
-        <Gallery images={IMAGES2} />
-      </div>
-      <div className="gallery-container">
-        <br />
-        <div className="text-container">
-          <h3>Wały</h3>
+          <Gallery images={IMAGES2} />
         </div>
+        <div className="gallery-container">
+          <br />
+          <div className="text-container">
+            <h3>Wały</h3>
+          </div>
 
-        <Gallery images={IMAGES3} />
-      </div>
-      <div className="gallery-container">
-        <br />
-        <div className="text-container">
-          <h3>Formator Zagonów</h3>
+          <Gallery images={IMAGES3} />
         </div>
+        <div className="gallery-container">
+          <br />
+          <div className="text-container">
+            <h3>Formator Zagonów</h3>
+          </div>
 
-        <Gallery images={IMAGES4} />
-      </div>
-      <div className="gallery-container">
-        <br />
-        <div className="text-container">
-          <h3>Zamiatarki</h3>
+          <Gallery images={IMAGES4} />
         </div>
+        <div className="gallery-container">
+          <br />
+          <div className="text-container">
+            <h3>Zamiatarki</h3>
+          </div>
 
-        <Gallery images={IMAGES5} />
-      </div>
-      <div className="gallery-container">
-        <br />
-        <div className="text-container">
-          <h3>Podgarniacz Ślimakowy</h3>
+          <Gallery images={IMAGES5} />
         </div>
+        <div className="gallery-container">
+          <br />
+          <div className="text-container">
+            <h3>Podgarniacz Ślimakowy</h3>
+          </div>
 
-        <Gallery images={IMAGES6} />
-      </div>
-      <div className="gallery-container">
-        <br />
-        <div className="text-container">
-          <h3>Podgarniacz Kołowy</h3>
+          <Gallery images={IMAGES6} />
         </div>
+        <div className="gallery-container">
+          <br />
+          <div className="text-container">
+            <h3>Podgarniacz Kołowy</h3>
+          </div>
 
-        <Gallery images={IMAGES7} />
-      </div>
-      <div className="gallery-container">
-        <br />
-        <div className="text-container">
-          <h3>Inne maszyny i konstrukcje</h3>
+          <Gallery images={IMAGES7} />
         </div>
+        <div className="gallery-container">
+          <br />
+          <div className="text-container">
+            <h3>Inne maszyny i konstrukcje</h3>
+          </div>
 
-        <Gallery images={IMAGES8} />
+          <Gallery images={IMAGES8} />
+        </div>
+        <br />
       </div>
-      <br />
     </GalleryContainer>
   );
 };

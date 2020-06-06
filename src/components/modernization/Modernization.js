@@ -6,6 +6,7 @@ import przyczepa from "../../images/przyczepa.jpg";
 import przyczepa1 from "../../images/przyczepa1.jpg";
 import sadzarka from "../../images/sadzarka.JPG";
 import wal from "../../images/wal.jpg";
+import { Link } from "react-router-dom";
 
 const ModernizationItem = styled.div`
   .modernizationContainer {
@@ -54,6 +55,11 @@ const ModernizationItem = styled.div`
     display: flex;
     margin: 0 auto;
   }
+  .add {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+  }
 `;
 
 export const Modernization = () => {
@@ -67,13 +73,29 @@ export const Modernization = () => {
           wpływa na jakość i trwałość wykonanej usługi. Szczegóły techniczne do
           uzgodnienia.
         </p>
-        <h3>Przyczepy Rolnicze</h3>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Przyczepy Rolnicze
+          </Link>
+        </h3>
         <img className="photopage" src={przyczepa} />
-        <h3>Przyczepy do Bali</h3>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Przyczepy do Bali
+          </Link>
+        </h3>
         <img className="photopage" src={przyczepa1} />
-        <h3>Sadzarka</h3>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Sadzarki
+          </Link>
+        </h3>
         <img className="photopage" src={sadzarka} />
-        <h3>Wały</h3>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Wały
+          </Link>
+        </h3>
         <img className="photopage" src={wal} />
         <h3>Zapraszamy do współpracy!</h3>
         <a href="https://www.facebook.com/">
