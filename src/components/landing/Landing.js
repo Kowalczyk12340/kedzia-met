@@ -13,7 +13,7 @@ const LandingContainer = styled.div`
     margin: 0 auto;
     margin-top: 1em;
     margin-bottom: 1em;
-    opacity: 0.8;
+    opacity: 0.9;
     padding: 1em;
     border-radius: 5%;
   }

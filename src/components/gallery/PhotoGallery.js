@@ -9,7 +9,7 @@ const GalleryContainer = styled.div`
     margin: 0 auto;
     margin-top: 1em;
     margin-bottom: 1em;
-    opacity: 0.8;
+    opacity: 0.9;
     padding: 1em;
     border-radius: 5%;
   }
@@ -28,7 +28,6 @@ const GalleryContainer = styled.div`
     text-shadow: grey;
     font-weight: bold;
     font-size: 34px;
-    text-decoration: underline;
   }
   h3 {
     text-align: center;
