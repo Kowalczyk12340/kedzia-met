@@ -3,12 +3,7 @@ import styled from "styled-components";
 
 const FooterItem = styled.div`
   .footerText {
-    background-image: linear-gradient(
-      to right,
-      #232526 0%,
-      #414345 51%,
-      #232526 100%
-    );
+    background-color: black;
     color: white;
     position: fixed;
     left: 0;

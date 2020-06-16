@@ -8,13 +8,6 @@ const Menu = styled.div`
   .topnav {
     background-color: #262626;
     overflow: hidden;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background-image: linear-gradient(
-      to right,
-      #232526 0%,
-      #414345 51%,
-      #232526 100%
-    );
   }
   .topnav:hover {
     background-position: right center;
@@ -29,6 +22,8 @@ const Menu = styled.div`
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
   }
 
   /* Change the color of links on hover */
