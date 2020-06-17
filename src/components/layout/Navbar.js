@@ -8,13 +8,6 @@ const Menu = styled.div`
   .topnav {
     background-color: #262626;
     overflow: hidden;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background-image: linear-gradient(
-      to right,
-      #232526 0%,
-      #414345 51%,
-      #232526 100%
-    );
   }
   .topnav:hover {
     background-position: right center;
@@ -29,6 +22,8 @@ const Menu = styled.div`
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
   }
 
   /* Change the color of links on hover */
@@ -90,11 +85,14 @@ export const Navbar = () => {
         <Link to="/">
           <img className="active" src={logo} />
         </Link>
+        <Link to="/offers" className="navlink">
+          Oferta
+        </Link>
         <Link to="/modernization" className="navlink">
-          Oferta modernizacji
+          Modernizacja
         </Link>
         <Link to="/orders" className="navlink">
-          Oferta zamówień
+          Zamówienia
         </Link>
         <Link to="/gallery" className="navlink">
           Galeria

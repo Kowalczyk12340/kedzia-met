@@ -3,22 +3,27 @@ import styled from "styled-components";
 import Gallery from "react-grid-gallery";
 
 const GalleryContainer = styled.div`
-  .text-container {
-    background: white;
-    margin: 0 auto;
-    opacity: 0.9;
-    padding: 1em;
-    border-radius: 5%;
-    margin-bottom: 1em;
-    text-align: justify;
-  }
-
   h1 {
     text-align: center;
     text-shadow: grey;
     font-weight: bold;
-    font-size: 34px;
-    text-decoration: underline;
+    font-size: 44px;
+    background: #e52d27; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #b31217,
+      #e52d27
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #b31217,
+      #e52d27
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 80px;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
   h3 {
     text-align: center;
@@ -26,12 +31,10 @@ const GalleryContainer = styled.div`
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;
-    margin-top: 25px;
   }
   .gallery-container {
     width: 90%;
     margin: 0 auto;
-    margin-top: 1em;
     display: grid;
   }
 `;
@@ -354,11 +357,9 @@ const IMAGES = [
 export const PhotoGallery = () => {
   return (
     <GalleryContainer>
-      <div className="mainContainer">
-        <div className="gallery-container">
-          <h1>Sprawdź efekty naszej pracy!</h1>
-          <Gallery images={IMAGES} />
-        </div>
+      <div className="gallery-container">
+        <h1>Efekty naszej pracy</h1>
+        <Gallery images={IMAGES} />
       </div>
     </GalleryContainer>
   );

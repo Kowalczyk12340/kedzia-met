@@ -8,17 +8,6 @@ const Map = ReactMapboxGl({
 });
 
 const ContactData = styled.div`
-  .contactContainer {
-    background: white;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    opacity: 0.9;
-    padding: 1em;
-    border-radius: 5%;
-  }
-
   .wrapper {
     overflow: hidden;
     width: 90%;
