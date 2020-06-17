@@ -6,10 +6,13 @@ import GoogleMapReact from "google-map-react";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const ContactData = styled.div`
+<<<<<<< HEAD
   h3 {
     margin: 0;
   }
 
+=======
+>>>>>>> 0bce6902f94075e04ec76e82889faac79f3442d0
   .wrapper {
     overflow: hidden;
     width: 100%;

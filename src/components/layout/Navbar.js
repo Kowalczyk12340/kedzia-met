@@ -85,11 +85,14 @@ export const Navbar = () => {
         <Link to="/">
           <img className="active" src={logo} />
         </Link>
+        <Link to="/offers" className="navlink">
+          Oferta
+        </Link>
         <Link to="/modernization" className="navlink">
-          Oferta modernizacji
+          Modernizacja
         </Link>
         <Link to="/orders" className="navlink">
-          Oferta zamówień
+          Zamówienia
         </Link>
         <Link to="/gallery" className="navlink">
           Galeria

@@ -1,27 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import photo from "../../images/spawacz.png";
+import photo from "../../images/spawacz.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import logo1 from "../../images/kedzia.png";
 import { Link } from "react-router-dom";
 
 const LandingContainer = styled.div`
-  .mainContainer {
-    background: white;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    opacity: 0.9;
-    padding: 1em;
-    border-radius: 5%;
-  }
-
   .header {
-    width: 50%;
+    width: 100%;
     height: auto;
     margin: 25px 0 auto;
+    float: left;
   }
   h3 {
     text-align: center;
@@ -44,10 +34,14 @@ const LandingContainer = styled.div`
   }
   .row {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
+  .photo {
+    width: 100%;
+    height: auto;
+  }
   p {
     text-align: justify;
     text-shadow: gray;
@@ -55,35 +49,17 @@ const LandingContainer = styled.div`
   }
 
   .column {
-    flex: 40%;
+    flex: 35%;
     padding: 5px;
   }
   .photo-item {
     width: 100%;
   }
   .fb-txt {
+    margin-top: 30px;
+    font-size: 23px;
     text-align: center;
     font-weight: bold;
-  }
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 720px) {
-    .column {
-      width: 100%;
-    }
-    .row {
-      display: block;
-      width: 80%;
-      margin: 0 auto;
-    }
-    .fb-txt {
-      text-align: center;
-      font-weight: bold;
-    }
-  }
-  @media screen and (min-width: 1020px) {
-    .header {
-      width: 30%;
-    }
   }
 `;
 
@@ -91,29 +67,22 @@ export const Landing = () => {
   return (
     <LandingContainer>
       <div className="mainContainer">
-        <Link to="/">
-          <img className="header" src={logo1} />
-        </Link>
-        <h3>Zapraszamy do odwiedzenia naszej strony!</h3>
+        <div>
+          <img className="photo" src={photo} />
+        </div>
         <div className="row">
           <div className="column">
-            <p>
-              Nasza firma została założona w październiku 2013 roku. Pomysł
-              narodził się w małym garażu. Z czasem widać było spore
-              zainteresowanie naszą działalnością i ciągły wzrost nowych
-              klientów. Postanowiliśmy się więc rozbudować i w ten sposób
-              poszerzyć zakres naszych usług. Wszystko co robimy jest z myślą o
-              naszych odbiorcach. Staramy się by każdy z nich był zadowolony.
-              Wszystkie nasze maszyny wykonujemy bardzo dokładnie z dużą
-              dbałością o szczegóły. Jakość i trwałość naszych usług podwyższa
-              fakt, że wszystkie elementy są piaskowane. Nasza firma wykonuje
-              również specjalne zamówienia naszych klientów lub oferujemy
-              maszyny przez nas już wykonane, które znajdziecie państwo na
-              naszej stronie.
-            </p>
+            <Link to="/">
+              <img className="header" src={logo1} />
+            </Link>
           </div>
           <div className="column">
-            <img className="photo-item" src={photo} />
+            <h3>PPHU KĘDZIA-MET</h3>
+            <p>
+              Rzetelnie wykonujemy swoją pracę, co pozwala nam się rozwijać i
+              zyskiwać nowych klientów. Zapraszamy do obejrzenia naszej strony
+              internetowej.
+            </p>
           </div>
         </div>
         <a href="https://www.facebook.com/">
