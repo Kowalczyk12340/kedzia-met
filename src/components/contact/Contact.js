@@ -1,43 +1,61 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import logo1 from "../../images/kedzia.png";
+import GoogleMapReact from "google-map-react";
 
-const Map = ReactMapboxGl({
-  accessToken:
-    "pk.eyJ1Ijoia2FtaWxrbGVzdGEiLCJhIjoiY2tiMThxdjBwMGZqYTJzcWpjeWF0d2c4ayJ9.-VfsJEB7VWDzOyW5A3heDg",
-});
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const ContactData = styled.div`
-  .contactContainer {
-    background: white;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    opacity: 0.9;
-    padding: 1em;
-    border-radius: 5%;
+  h3 {
+    margin: 0;
   }
 
   .wrapper {
     overflow: hidden;
-    width: 90%;
-    margin: auto;
-    margin-bottom: 30px;
+    width: 100%;
+    font-size: 24px;
+  }
+  .wrapper .contact-data .header {
+    width: 16em;
+    height: auto;
+    margin-top: 2em;
+  }
+
+  .wrapper .contact-data .info {
+    float: left;
+    padding: 2em;
+  }
+
+  .wrapper .contact-data .info a {
+    color: white;
+  }
+
+  .wrapper .contact-data .info-wrapper {
+    display: inline-block;
   }
 
   .wrapper div {
     min-height: 200px;
-    padding: 10px;
   }
   .wrapper .contact-data {
     float: left;
-    margin-right: 20px;
+    width: 40%;
+    background: #e52d27; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #b31217,
+      #e52d27
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #b31217,
+      #e52d27
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    height: 100vh;
   }
   .wrapper .map {
     overflow: hidden;
-    margin: 10px;
-    max-height: 600px;
   }
 
   @media screen and (max-width: 800px) {
@@ -54,11 +72,6 @@ const ContactData = styled.div`
     font-size: 34px;
     text-decoration: underline;
   }
-  h7 {
-    text-decoration: underline;
-    font-weight: bold;
-    padding: 10px;
-  }
   p {
     text-align: center;
     letter-spacing: initial;
@@ -72,46 +85,66 @@ const ContactData = styled.div`
     margin-bottom: 20px;
   }
 `;
-export const Contact = () => {
-  return (
-    <ContactData>
-      <div className="contactContainer">
+class Contact extends Component {
+  static defaultProps = {
+    center: {
+      lat: 51.714031,
+      lng: 18.547956,
+    },
+    zoom: 12,
+  };
+
+  render() {
+    return (
+      <ContactData>
         <div className="wrapper">
           <div className="contact-data">
-            <h1>Dane Kontaktowe</h1>
-            <h2>ZPHU KĘDZIA-MET</h2>
-            <h3>Dział modernizacji i zamówień:</h3>
-            <p>
-              <h7>Marek Kędzia</h7>
-              <br /> Numer telefonu: <b>608 473 406</b> - dotyczący modernizacji
-              <br /> Numer telefonu: <b>739 082 982</b> - dotyczący zamówień
-            </p>
-            <h3>Adres E-mail:</h3>
-            <a className="contactDetails" href="#">
-              kedzia-met@wp.pl
-            </a>
+            <img className="header" src={logo1} />
+
+            <h3>Marek Kędzia</h3>
+            <div className="info-wrapper">
+              <div className="info">
+                <h3>Telefon</h3>
+                Modernizacja
+                <br />
+                <i className="fa fa-phone"></i>
+                <b>608 473 406</b>
+                <br />
+                Zamówienia
+                <br /> <i className="fa fa-phone"></i>
+                <b>739 082 982</b>
+              </div>
+              <div className="info">
+                <h3>Adres E-mail</h3>
+                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+
+                <a className="contactDetails" href="#">
+                  kedzia-met@wp.pl
+                </a>
+              </div>
+            </div>
           </div>
           <div className="map">
-            <Map
-              style="mapbox://styles/mapbox/streets-v9"
-              containerStyle={{
-                height: "100vh",
-                width: "100vw",
-              }}
-              center={[18.547944, 51.738649]}
-              zoom={[13]}
-            >
-              <Layer
-                type="symbol"
-                id="marker"
-                layout={{ "icon-image": "marker-15" }}
+            <div style={{ height: "100vh", width: "100%" }}>
+              <GoogleMapReact
+                bootstrapURLKeys={{
+                  key: "AIzaSyCybtdeQ_4YPm2SX3Yi-m4c3rMOO72O7GM",
+                }}
+                defaultCenter={this.props.center}
+                defaultZoom={this.props.zoom}
               >
-                <Feature coordinates={[18.547944, 51.753849]} />
-              </Layer>
-            </Map>
+                <AnyReactComponent
+                  lat={51.754031}
+                  lng={18.547956}
+                  text="Kędzia-Met"
+                />
+              </GoogleMapReact>
+            </div>
           </div>
         </div>
-      </div>
-    </ContactData>
-  );
-};
+      </ContactData>
+    );
+  }
+}
+
+export default Contact;
