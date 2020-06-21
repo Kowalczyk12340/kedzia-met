@@ -36,32 +36,28 @@ const LandingContainer = styled.div`
     font-weight: bold;
   }
   .header {
-    width: 100%;
+    width: 80%;
     height: auto;
-    margin: 25px 0 auto;
-    float: left;
+    margin: 0 auto;
+    display: block;
+    margin-top: 1em;
   }
   h3 {
     text-align: center;
     text-shadow: grey;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 41px;
     text-decoration: none;
   }
   /* Two images containers (use 50% for two, etc) */
   .column {
-    float: left;
+    margin: 0 auto;
     width: 50%;
     padding: 5px;
-  }
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+    display: block;
   }
   .row {
-    display: flex;
+    display: grid;
     width: 90%;
     margin: 0 auto;
   }
@@ -73,12 +69,15 @@ const LandingContainer = styled.div`
   p {
     text-align: justify;
     text-shadow: gray;
-    font-size: 20px;
+    font-size: 36px;
+    font-weight: bold;
   }
 
   .column {
     flex: 35%;
     padding: 5px;
+    display: block;
+    width: 80%;
   }
   .photo-item {
     width: 100%;
@@ -88,6 +87,11 @@ const LandingContainer = styled.div`
     font-size: 23px;
     text-align: center;
     font-weight: bold;
+  }
+  @media screen and (min-width: 1220px) {
+    .header {
+      width: 60%;
+    }
   }
 `;
 
