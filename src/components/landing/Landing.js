@@ -88,7 +88,15 @@ const LandingContainer = styled.div`
     text-align: center;
     font-weight: bold;
   }
-  @media screen and (min-width: 1220px) {
+  @media screen and (max-width: 1020px) {
+    h1 {
+      font-size: 70px;
+    }
+  }
+  @media screen and (max-width: 1220px) and (min-width: 1020px) {
+    h1 {
+      font-size: 80px;
+    }
     .header {
       width: 60%;
     }
