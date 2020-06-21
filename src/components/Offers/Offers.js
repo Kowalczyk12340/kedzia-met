@@ -16,6 +16,10 @@ const OffersItem = styled.div`
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   h1 {
     text-align: center;
@@ -25,13 +29,11 @@ const OffersItem = styled.div`
     color: white;
     width: 100%;
     margin: 0;
-    position: absolute;
-    top: 50%;
     vertical-align: center;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
   }
   h3 {
     text-align: center;
@@ -142,6 +144,16 @@ const OffersItem = styled.div`
     }
     p {
       font-size: 28px;
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    h1 {
+      font-size: 70px;
+    }
+  }
+  @media screen and (max-width: 1220px) and (min-width: 1020px) {
+    h1 {
+      font-size: 80px;
     }
   }
 `;

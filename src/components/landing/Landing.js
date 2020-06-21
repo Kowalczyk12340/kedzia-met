@@ -18,6 +18,9 @@ const LandingContainer = styled.div`
     background-attachment: fixed;
     background-position: center;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   h1 {
     text-align: center;
@@ -27,13 +30,11 @@ const LandingContainer = styled.div`
     color: white;
     width: 100%;
     margin: 0;
-    position: absolute;
-    top: 50%;
     vertical-align: center;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
   }
   .header {
     width: 80%;
@@ -108,7 +109,9 @@ export const Landing = () => {
     <LandingContainer>
       <div className="container">
         <div className="content">
-          <h1>Zapraszamy do odwiedzenia naszej strony!</h1>
+          <div className="title">
+            <h1>Zapraszamy do odwiedzenia naszej strony!</h1>
+          </div>
         </div>
         <div className="row">
           <div className="column">
