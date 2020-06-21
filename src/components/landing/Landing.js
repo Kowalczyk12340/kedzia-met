@@ -22,6 +22,11 @@ const LandingContainer = styled.div`
     justify-content: center;
     align-items: center;
   }
+  .title {
+    border-radius: 19%;
+    background-color: rgba(251, 251, 251, 0.4);
+    width: 100%;
+  }
   h1 {
     text-align: center;
     text-shadow: grey;
@@ -91,12 +96,12 @@ const LandingContainer = styled.div`
   }
   @media screen and (max-width: 1020px) {
     h1 {
-      font-size: 70px;
+      font-size: 50px;
     }
   }
   @media screen and (max-width: 1220px) and (min-width: 1020px) {
     h1 {
-      font-size: 80px;
+      font-size: 60px;
     }
     .header {
       width: 60%;

@@ -21,6 +21,11 @@ const OffersItem = styled.div`
     justify-content: center;
     align-items: center;
   }
+  .title {
+    border-radius: 19%;
+    background-color: rgba(251, 251, 251, 0.4);
+    width: 100%;
+  }
   h1 {
     text-align: center;
     text-shadow: grey;
@@ -148,12 +153,12 @@ const OffersItem = styled.div`
   }
   @media screen and (max-width: 1020px) {
     h1 {
-      font-size: 70px;
+      font-size: 50px;
     }
   }
   @media screen and (max-width: 1220px) and (min-width: 1020px) {
     h1 {
-      font-size: 80px;
+      font-size: 60px;
     }
   }
 `;
@@ -163,7 +168,9 @@ export const Offers = () => {
     <OffersItem>
       <div className="container">
         <div className="content">
-          <h1>Zapoznaj się z naszą ofertą</h1>
+          <div className="title">
+            <h1>Zapoznaj się z naszą ofertą</h1>
+          </div>
         </div>
         <div class="btn-group">
           <button>
