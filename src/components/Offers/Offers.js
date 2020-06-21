@@ -6,11 +6,32 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import weld from "../../images/welding.jpg";
 
 const OffersItem = styled.div`
+  .container {
+    width: 100%;
+  }
+  .content {
+    background-image: url(${weld});
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
   h1 {
     text-align: center;
     text-shadow: grey;
     font-weight: bold;
-    font-size: 69px;
+    font-size: 100px;
+    color: white;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    vertical-align: center;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: bold;
   }
   h3 {
     text-align: center;
@@ -25,7 +46,9 @@ const OffersItem = styled.div`
     margin-bottom: 35px;
     height: auto;
     background-color: rgba(250, 250, 250, 0.5);
+    color: black;
     border-radius: 5rem;
+    font-weight: bold;
   }
   p {
     text-align: justify;
@@ -35,6 +58,7 @@ const OffersItem = styled.div`
     width: 90%;
     margin: 0 auto;
     padding: 20px;
+    font-size: 24px;
   }
   .weld {
     width: 100%;
@@ -42,19 +66,16 @@ const OffersItem = styled.div`
   }
   .add {
     color: white;
+    margin: 1em;
     text-decoration: none;
     font-size: 24px;
   }
   .fb {
-    background-color: rgba(250, 250, 250, 0.9);
+    background-color: white;
     border-radius: 7px;
     height: 22px;
     width: 22px;
-  }
-  .header {
-    width: 100%;
-    height: auto;
-    margin: 25px 0 auto;
+    margin: 0 auto;
   }
   .btn-group {
   }
@@ -74,12 +95,12 @@ const OffersItem = styled.div`
     border: none;
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
-    width: 15rem;
+    width: 16rem;
     height: 4rem;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer; /* Pointer/hand icon */
-    margin: 0 auto;
+    margin: 0.5em;
   }
 
   .btn-group button:not(:last-child) {
@@ -101,6 +122,27 @@ const OffersItem = styled.div`
 
   .fb-txt {
     font-size: 23px;
+    color: black;
+    font-weight: bold;
+  }
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (min-width: 1220px) {
+    .column {
+      width: 100%;
+    }
+    .row {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .fb-txt {
+      text-align: center;
+      font-weight: bold;
+    }
+    p {
+      font-size: 28px;
+    }
   }
 `;
 
@@ -108,10 +150,9 @@ export const Offers = () => {
   return (
     <OffersItem>
       <div className="container">
-        <div>
-          <img className="weld" src={weld} />
+        <div className="content">
+          <h1>Zapoznaj się z naszą ofertą</h1>
         </div>
-        <h1>Zapoznaj się z naszą ofertą</h1>
         <div class="btn-group">
           <button>
             <Link className="add" to="/modernization">
@@ -130,7 +171,7 @@ export const Offers = () => {
           </button>
           <button>
             <Link className="add" to="#">
-              Usługi Rolnicze
+              Renowacja
             </Link>
           </button>
         </div>
@@ -149,9 +190,11 @@ export const Offers = () => {
             znajdziecie państwo na naszej stronie.
           </p>
         </div>
-        <a className="fb" href="https://www.facebook.com/">
-          <FontAwesomeIcon icon={faFacebookF} />
-        </a>
+        <div className="fb">
+          <a href="https://www.facebook.com/">
+            <FontAwesomeIcon icon={faFacebookF} />
+          </a>
+        </div>
         <br />
         <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
       </div>

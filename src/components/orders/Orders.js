@@ -35,6 +35,7 @@ const LandingOrders = styled.div`
   h3 {
     text-align: center;
     text-shadow: grey;
+    margin: 0 auto;
     font-weight: bold;
     font-size: 28px;
     text-decoration: none;
@@ -46,6 +47,15 @@ const LandingOrders = styled.div`
     font-size: 22px;
     width: 90%;
     display: inline-block;
+    vertical-align: center;
+  }
+  .description1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   p {
     text-align: justify;
@@ -97,9 +107,29 @@ const LandingOrders = styled.div`
     width: 80%;
     margin: 0 auto;
   }
+  .row1 {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
   .column {
     flex: 40%;
     padding: 5px;
+  }
+  .column1 {
+    flex: 40%;
+    padding: 5px;
+    position: relative;
+  }
+  .centerr {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    vertical-align: center;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: bold;
   }
   .fb-txt {
     font-size: 23px;
@@ -122,7 +152,20 @@ const LandingOrders = styled.div`
       width: 90%;
       height: auto;
       display: flex;
+      margin: 40px auto;
+    }
+    .column1 {
+      width: 100%;
+    }
+    .row1 {
+      display: block;
+      width: 90%;
       margin: 0 auto;
+    }
+    .centerr {
+      display: inline-block;
+      position: absolute;
+      margin: 20px 20px auto;
     }
   }
 `;
@@ -186,17 +229,19 @@ export const Orders = () => {
           Podgarniacz Kołowy
         </Link>
       </h3>
-      <div className="row">
-        <div className="column">
+      <div className="row1">
+        <div className="column1">
           <img className="photopage" src={podgarniacz2} />
         </div>
-        <div className="column">
-          <p className="description">
-            <h3>Wykonywany pod indywidualne zamówienie.</h3>
-          </p>
+        <div className="column1">
+          <div className="centerr">
+            <p>Wykonywane pod indywidualne zamówienie.</p>
+          </div>
         </div>
       </div>
       <h3>
+        <br />
+        <br />
         <Link className="add" to="/gallery" className="add">
           Zamiatarki
         </Link>
@@ -220,17 +265,20 @@ export const Orders = () => {
           Inne nasze przykładowe konstrukcje
         </Link>
       </h3>
-      <div className="row">
-        <div className="column">
+      <div className="row1">
+        <div className="column1">
           <img className="photopage" src={konstrukcja} />
         </div>
-        <div className="column">
-          <p className="description">
-            <h3>Wykonywane pod indywidualne zamówienie.</h3>
-          </p>
+        <div className="column1">
+          <div className="centerr">
+            <p>Wykonywane pod indywidualne zamówienie.</p>
+          </div>
         </div>
       </div>
 
+      <br />
+      <br />
+      <br />
       <p>
         I znacznie więcej! Więcej informacji co do zamówień uzyskacie Państwo
         mailowo lub telefonicznie, wszystkie informacje, podane są w zakładce{" "}

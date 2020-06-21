@@ -1,12 +1,40 @@
 import React from "react";
 import styled from "styled-components";
-import photo from "../../images/spawacz.jpg";
+import photo from "../../images/spawacz.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import logo1 from "../../images/kedzia.png";
 import { Link } from "react-router-dom";
 
 const LandingContainer = styled.div`
+  .container {
+    width: 100%;
+  }
+  .content {
+    background-image: url(${photo});
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    text-shadow: grey;
+    font-weight: bold;
+    font-size: 100px;
+    color: white;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    vertical-align: center;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+  }
   .header {
     width: 100%;
     height: auto;
@@ -66,9 +94,9 @@ const LandingContainer = styled.div`
 export const Landing = () => {
   return (
     <LandingContainer>
-      <div className="mainContainer">
-        <div>
-          <img className="photo" src={photo} />
+      <div className="container">
+        <div className="content">
+          <h1>Zapraszamy do odwiedzenia naszej strony!</h1>
         </div>
         <div className="row">
           <div className="column">
