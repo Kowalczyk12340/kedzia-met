@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import logo1 from "../../images/kedzia.png";
-import GoogleMapReact from "google-map-react";
+import MapContainer from "./MapContainer";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const ContactData = styled.div`
-<<<<<<< HEAD
   h3 {
     margin: 0;
   }
 
-=======
->>>>>>> 0bce6902f94075e04ec76e82889faac79f3442d0
   .wrapper {
     overflow: hidden;
     width: 100%;
@@ -21,7 +18,7 @@ const ContactData = styled.div`
   .wrapper .contact-data .header {
     width: 16em;
     height: auto;
-    margin-top: 2em;
+    margin-top: 1em;
   }
 
   .wrapper .contact-data .info {
@@ -61,13 +58,61 @@ const ContactData = styled.div`
     overflow: hidden;
   }
 
-  @media screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
+    .wrapper {
+      max-height: 700px;
+    }
+    .wrapper .info-wrapper {
+      max-height: 400px;
+    }
+    .contact-data {
+      max-height: 700px;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
     .wrapper .contact-data {
       float: none;
       margin-right: 0;
       width: auto;
+      max-height: 700px;
+    }
+    .wrapper {
+      max-height: 700px;
+    }
+    .wrapper .info-wrapper {
+      max-height: 400px;
     }
   }
+  @media screen and (max-width: 400px) {
+    .header {
+      max-width: 250px;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 570px) and (max-width: 800px) {
+    .wrapper .contact-data {
+      float: none;
+      margin-right: 0;
+      width: auto;
+      max-height: 500px;
+    }
+    .wrapper {
+      max-height: 500px;
+    }
+    .wrapper .info-wrapper {
+      max-height: 400px;
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 960px) {
+    .header {
+      max-width: 300px;
+      height: auto;
+    }
+  }
+
   h1 {
     text-align: center;
     text-shadow: grey;
@@ -128,21 +173,7 @@ class Contact extends Component {
             </div>
           </div>
           <div className="map">
-            <div style={{ height: "100vh", width: "100%" }}>
-              <GoogleMapReact
-                bootstrapURLKeys={{
-                  key: "AIzaSyCybtdeQ_4YPm2SX3Yi-m4c3rMOO72O7GM",
-                }}
-                defaultCenter={this.props.center}
-                defaultZoom={this.props.zoom}
-              >
-                <AnyReactComponent
-                  lat={51.754031}
-                  lng={18.547956}
-                  text="Kędzia-Met"
-                />
-              </GoogleMapReact>
-            </div>
+            <MapContainer />
           </div>
         </div>
       </ContactData>
