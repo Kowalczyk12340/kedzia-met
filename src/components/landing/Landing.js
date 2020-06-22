@@ -115,7 +115,7 @@ export const Landing = () => {
       <div className="container">
         <div className="content">
           <div className="title">
-            <h1>Zapraszamy do odwiedzenia naszej strony!</h1>
+            <h1>Zakład Produkcyjno Handlowo Usługowy</h1>
           </div>
         </div>
         <div className="row">
@@ -125,11 +125,19 @@ export const Landing = () => {
             </Link>
           </div>
           <div className="column">
-            <h3>PPHU KĘDZIA-MET</h3>
             <p>
-              Rzetelnie wykonujemy swoją pracę, co pozwala nam się rozwijać i
-              zyskiwać nowych klientów. Zapraszamy do obejrzenia naszej strony
-              internetowej.
+              Nasza firma została założona w październiku 2013 roku. Pomysł
+              narodził się w małym garażu. Z czasem widać było spore
+              zainteresowanie naszą działalnością i ciągły wzrost nowych
+              klientów. Postanowiliśmy się więc rozbudować i w ten sposób
+              poszerzyć zakres naszych usług. Wszystko co robimy jest z myślą o
+              naszych odbiorcach. Staramy się by każdy z nich był zadowolony.
+              Wszystkie nasze maszyny wykonujemy bardzo dokładnie z dużą
+              dbałością o szczegóły. Jakość i trwałość naszych usług podwyższa
+              fakt, że wszystkie elementy są piaskowane. Nasza firma wykonuje
+              również specjalne zamówienia naszych klientów lub oferujemy
+              maszyny przez nas już wykonane, które znajdziecie państwo na
+              naszej stronie.
             </p>
           </div>
         </div>

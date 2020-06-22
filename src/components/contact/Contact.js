@@ -14,16 +14,17 @@ const ContactData = styled.div`
     overflow: hidden;
     width: 100%;
     font-size: 24px;
+    margin: 0 auto;
   }
   .wrapper .contact-data .header {
     width: 16em;
     height: auto;
-    margin-top: 1em;
+    margin-top: 0.75em;
   }
 
   .wrapper .contact-data .info {
     float: left;
-    padding: 2em;
+    padding: 0.4em;
   }
 
   .wrapper .contact-data .info a {
@@ -60,10 +61,10 @@ const ContactData = styled.div`
 
   @media only screen and (max-width: 600px) {
     .wrapper {
-      max-height: 700px;
+      max-height: 800px;
     }
     .wrapper .info-wrapper {
-      max-height: 400px;
+      max-height: 500px;
     }
     .contact-data {
       max-height: 700px;
@@ -148,9 +149,16 @@ class Contact extends Component {
         <div className="wrapper">
           <div className="contact-data">
             <img className="header" src={logo1} />
-
             <h3>Marek Kędzia</h3>
+            <h4>ZPHU KĘDZIA-MET</h4>
             <div className="info-wrapper">
+              <div className="info">
+                <h3>Adres</h3>
+                <i class="fa fa-home"></i>
+                Wacławów 24
+                <br />
+                98-215 Goszczanów
+              </div>
               <div className="info">
                 <h3>Telefon</h3>
                 Modernizacja
