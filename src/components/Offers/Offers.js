@@ -21,6 +21,11 @@ const OffersItem = styled.div`
     justify-content: center;
     align-items: center;
   }
+  .title {
+    border-radius: 19%;
+    background-color: rgba(251, 251, 251, 0.4);
+    width: 100%;
+  }
   h1 {
     text-align: center;
     text-shadow: grey;
@@ -50,7 +55,6 @@ const OffersItem = styled.div`
     background-color: rgba(250, 250, 250, 0.5);
     color: black;
     border-radius: 5rem;
-    font-weight: bold;
   }
   p {
     text-align: justify;
@@ -109,6 +113,13 @@ const OffersItem = styled.div`
     border-right: none; /* Prevent double borders */
   }
 
+  .add1 {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
   /* Clear floats (clearfix hack) */
   .btn-group:after {
     content: "";
@@ -143,17 +154,17 @@ const OffersItem = styled.div`
       font-weight: bold;
     }
     p {
-      font-size: 28px;
+      font-size: 34px;
     }
   }
   @media screen and (max-width: 1020px) {
     h1 {
-      font-size: 70px;
+      font-size: 50px;
     }
   }
   @media screen and (max-width: 1220px) and (min-width: 1020px) {
     h1 {
-      font-size: 80px;
+      font-size: 60px;
     }
   }
 `;
@@ -163,7 +174,9 @@ export const Offers = () => {
     <OffersItem>
       <div className="container">
         <div className="content">
-          <h1>Zapoznaj się z naszą ofertą</h1>
+          <div className="title">
+            <h1>Zapoznaj się z naszą ofertą</h1>
+          </div>
         </div>
         <div class="btn-group">
           <button>
@@ -183,23 +196,26 @@ export const Offers = () => {
           </button>
           <button>
             <Link className="add" to="#">
-              Renowacja
+              Tokarstwo
             </Link>
           </button>
         </div>
         <div className="description">
           <p>
-            Nasza firma została założona w październiku 2013 roku. Pomysł
-            narodził się w małym garażu. Z czasem widać było spore
-            zainteresowanie naszą działalnością i ciągły wzrost nowych klientów.
-            Postanowiliśmy się więc rozbudować i w ten sposób poszerzyć zakres
-            naszych usług. Wszystko co robimy jest z myślą o naszych odbiorcach.
-            Staramy się by każdy z nich był zadowolony. Wszystkie nasze maszyny
-            wykonujemy bardzo dokładnie z dużą dbałością o szczegóły. Jakość i
-            trwałość naszych usług podwyższa fakt, że wszystkie elementy są
-            piaskowane. Nasza firma wykonuje również specjalne zamówienia
-            naszych klientów lub oferujemy maszyny przez nas już wykonane, które
-            znajdziecie państwo na naszej stronie.
+            Oferujemy wiele rozmaitych usług, takich jak modernizacja i
+            renowacja maszyn rolniczych, spawalnictwo, tokarstwo, zamawianie
+            części potrzebnych dla naszych klientów, oraz tworzenie różnych
+            metalowych konstrukcji, wiele wykonanych i zrenomowanych przez nas
+            maszyn możecie znaleźć Państwo w zakładce{" "}
+            <Link className="add1" to="/gallery">
+              Galeria
+            </Link>
+            .
+          </p>
+          <p>
+            Rzetelnie wykonujemy swoją pracę, co pozwala nam się rozwijać i
+            zyskiwać nowych klientów. Zapraszamy do obejrzenia naszej strony
+            internetowej.
           </p>
         </div>
         <div className="fb">

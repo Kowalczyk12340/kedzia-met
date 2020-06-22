@@ -358,7 +358,7 @@ export const PhotoGallery = () => {
   return (
     <GalleryContainer>
       <div className="gallery-container">
-        <h1>Efekty naszej pracy</h1>
+        <h1>Galeria</h1>
         <Gallery images={IMAGES} />
       </div>
     </GalleryContainer>
