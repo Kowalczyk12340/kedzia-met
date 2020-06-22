@@ -24,7 +24,7 @@ const ContactData = styled.div`
 
   .wrapper .contact-data .info {
     float: left;
-    padding: 0.4em;
+    padding: 0.5em;
   }
 
   .wrapper .contact-data .info a {
@@ -71,7 +71,7 @@ const ContactData = styled.div`
     }
   }
 
-  @media screen and (max-width: 570px) {
+  @media screen and (min-width: 421px) and (max-width: 570px) {
     .wrapper .contact-data {
       float: none;
       margin-right: 0;
@@ -85,14 +85,53 @@ const ContactData = styled.div`
       max-height: 400px;
     }
   }
-  @media screen and (max-width: 400px) {
-    .header {
-      max-width: 250px;
-      height: auto;
+  @media screen and (min-width: 391px) and (max-width: 420px) {
+    .wrapper {
+      max-height: 100%;
+    }
+    .wrapper .contact-data {
+      float: none;
+      margin-right: 0;
+      width: auto;
+    }
+    .wrapper .info-wrapper {
+      min-height: 90%;
+    }
+    .wrapper .contact-data .info {
+      font-size: 21px;
+    }
+    .info {
+      margin: 0 auto;
+      position: flex;
+      display: list-item;
+      width: 28%;
+    }
+  }
+  @media screen and (max-width: 390px) {
+    .wrapper .contact-data {
+      float: none;
+      margin-right: 0;
+      width: auto;
+      max-height: 1100px;
+    }
+    .wrapper {
+      max-height: 100%;
+    }
+    .wrapper .info-wrapper {
+      min-height: 90%;
+    }
+    .wrapper .contact-data .info {
+      font-size: 17px;
+    }
+    .info {
+      margin: 0 auto;
+      position: flex;
+      display: list-item;
+      width: 28%;
     }
   }
 
-  @media screen and (min-width: 570px) and (max-width: 800px) {
+  @media screen and (min-width: 571px) and (max-width: 800px) {
     .wrapper .contact-data {
       float: none;
       margin-right: 0;
@@ -103,7 +142,7 @@ const ContactData = styled.div`
       max-height: 500px;
     }
     .wrapper .info-wrapper {
-      max-height: 400px;
+      max-height: 500px;
     }
   }
 
@@ -131,7 +170,7 @@ const ContactData = styled.div`
     color: black;
     text-decoration: none;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 `;
 class Contact extends Component {
