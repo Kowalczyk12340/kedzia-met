@@ -216,7 +216,7 @@ export const Orders = () => {
             <br />
             – Szerokość robocza – 150 cm.
             <br />
-            – Szerokość całkowita - XXX cm
+            – Szerokość całkowita - 170 cm
             <br />
             – Silnik hydrauliczny dobierany indywidualnie
             <br />
