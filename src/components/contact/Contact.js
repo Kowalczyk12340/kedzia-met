@@ -39,13 +39,8 @@ const ContactData = styled.div`
   }
 
   .wrapper .contact-data .info {
-    float: left;
-    padding: 0.5em;
-  }
-
-  .wrapper .contact-data .info1 {
-    float: center;
-    padding: 0.4em;
+    display: inline-block;
+    padding: 8px;
   }
 
   .wrapper .contact-data .info a {
@@ -53,7 +48,7 @@ const ContactData = styled.div`
   }
 
   .wrapper .contact-data .info-wrapper {
-    display: inline-block;
+    text-align: center;
   }
 
   .wrapper div {
@@ -86,9 +81,7 @@ const ContactData = styled.div`
     .wrapper {
       max-height: 100%;
     }
-    .wrapper .info-wrapper {
-      max-height: 1900px;
-    }
+
     .contact-data {
       max-height: 900px;
     }
@@ -103,13 +96,6 @@ const ContactData = styled.div`
     .wrapper {
       min-height: 700px;
     }
-    .wrapper .info-wrapper {
-      max-height: 1300px;
-    }
-    .wrapper .contact-data .info1 {
-      float: center;
-      padding: 0.5em;
-    }
   }
   @media screen and (min-width: 391px) and (max-width: 420px) {
     .wrapper {
@@ -120,19 +106,6 @@ const ContactData = styled.div`
       margin-right: 0;
       width: auto;
     }
-    .wrapper .info-wrapper {
-      min-height: 900%;
-    }
-    .wrapper .contact-data .info {
-      font-size: 21px;
-      min-height: 120%;
-    }
-    .info {
-      margin: 0 auto;
-      position: flex;
-      display: list-item;
-      width: 29%;
-    }
   }
   @media screen and (max-width: 390px) {
     .wrapper .contact-data {
@@ -142,24 +115,6 @@ const ContactData = styled.div`
     }
     .wrapper {
       max-height: 270%;
-    }
-    .wrapper .info-wrapper {
-      min-height: 95%;
-    }
-    .wrapper .contact-data .info {
-      font-size: 17px;
-    }
-    .wrapper .contact-data .info1 {
-      display: block;
-      text-align: center;
-      align-items: center;
-      align-content: center;
-    }
-    .info {
-      margin: 0 auto;
-      position: flex;
-      display: list-item;
-      width: 30%;
     }
   }
 
@@ -173,17 +128,8 @@ const ContactData = styled.div`
     .wrapper {
       min-height: 1000px;
     }
-    .wrapper .info-wrapper {
-      min-height: 1000px;
-    }
     h4 {
       text-align: center;
-    }
-    .wrapper .contact-data .info1 {
-      display: grid;
-      text-align: center;
-      align-items: center;
-      align-content: center;
     }
   }
 
@@ -258,7 +204,7 @@ class Contact extends Component {
                   kedzia-met@wp.pl
                 </a>
               </div>
-              <div className="info1">
+              <div className="info">
                 <h4>Dostępność</h4>
                 Pon - Pt
                 <br /> 8:00 - 16:00
