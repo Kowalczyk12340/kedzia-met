@@ -173,6 +173,9 @@ export const Modernization = () => {
       </a>
       <br />
       <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
+      <br />
+      <br />
+      <br />
     </ModernizationItem>
   );
 };
