@@ -24,10 +24,18 @@ const ContactData = styled.div`
     font-size: 24px;
     margin: 0 auto;
   }
+
+  .wrapper .contact-data {
+    width: 80%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
   .wrapper .contact-data .header {
     width: 80%;
     height: auto;
-    margin-top: 0.75em;
+    margin-top: 1.1em;
   }
 
   .wrapper .contact-data .info {
@@ -68,16 +76,10 @@ const ContactData = styled.div`
     color: white;
     height: 100vh;
   }
-  .break {
-    height: 3px;
-    background: linear-gradient(
-      to right,
-      #b31217,
-      #e52d27
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
   .wrapper .map {
     overflow: hidden;
+    margin: 0;
+    padding: 0;
   }
 
   @media only screen and (max-width: 600px) {
@@ -119,10 +121,11 @@ const ContactData = styled.div`
       width: auto;
     }
     .wrapper .info-wrapper {
-      min-height: 90%;
+      min-height: 900%;
     }
     .wrapper .contact-data .info {
       font-size: 21px;
+      min-height: 120%;
     }
     .info {
       margin: 0 auto;

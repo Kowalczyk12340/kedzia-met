@@ -168,11 +168,14 @@ export const Modernization = () => {
         </div>
       </div>
       <h3>Zapraszamy do współpracy!</h3>
-      <a href="https://www.facebook.com/">
+      <a href="https://m.facebook.com/K%C4%99dzia-Met-112339333860499/?ref=bookmarks">
         <FontAwesomeIcon icon={faFacebookF} />
       </a>
       <br />
       <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
+      <br />
+      <br />
+      <br />
     </ModernizationItem>
   );
 };
