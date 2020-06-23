@@ -286,7 +286,7 @@ export const Orders = () => {
           Kontakt
         </Link>
       </p>
-      <a href="https://www.facebook.com/">
+      <a href="https://m.facebook.com/K%C4%99dzia-Met-112339333860499/?ref=bookmarks">
         <FontAwesomeIcon icon={faFacebookF} />
       </a>
       <br />

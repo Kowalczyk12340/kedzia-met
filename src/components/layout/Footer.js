@@ -30,8 +30,9 @@ export const Footer = () => {
   return (
     <FooterItem>
       <div className="footerText">
-        Copyright &copy; 2020 Autorski projekt i wykonanie: Artur Frącala i
-        Marcin Kowalczyk
+        Copyright &copy; 2020
+        <br />
+        Autorski projekt i wykonanie: Artur Frącala i Marcin Kowalczyk
       </div>
     </FooterItem>
   );
