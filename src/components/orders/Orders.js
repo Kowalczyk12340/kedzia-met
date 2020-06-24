@@ -64,7 +64,8 @@ const LandingOrders = styled.div`
     font-size: 22px;
     width: 90%;
     margin: 0 auto;
-    padding: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .product {
     text-align: center;
@@ -125,11 +126,10 @@ const LandingOrders = styled.div`
     margin: 0;
     position: absolute;
     top: 50%;
-    vertical-align: center;
     left: 50%;
+    vertical-align: center;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    font-weight: bold;
   }
   .fb-txt {
     font-size: 23px;
@@ -252,7 +252,7 @@ export const Orders = () => {
         </div>
         <div className="column">
           <p className="description">
-            Nasz firma oferuje również szeroki wybór zamiatarek i odmiatarek
+            Nasza firma oferuje również szeroki wybór zamiatarek i odmiatarek
             występujących w różnych rozmiarach i typach. Wszystkie maszyny są
             wykonywane na zlecenie według indywidualnych potrzeb. Mogą być
             wyposażone w układ zmiany kąta pracy, kosz, układ zraszania,
@@ -280,12 +280,13 @@ export const Orders = () => {
       <br />
       <br />
       <p>
-        I znacznie więcej! Więcej informacji co do zamówień uzyskacie Państwo
-        mailowo lub telefonicznie, wszystkie informacje, podane są w zakładce{" "}
+        Więcej informacji co do zamówień uzyskacie Państwo mailowo lub
+        telefonicznie, wszystkie informacje, podane są w zakładce{" "}
         <Link className="add" to="/contact" className="navlink">
           Kontakt
         </Link>
       </p>
+      <br />
       <a href="https://m.facebook.com/K%C4%99dzia-Met-112339333860499/?ref=bookmarks">
         <FontAwesomeIcon icon={faFacebookF} />
       </a>

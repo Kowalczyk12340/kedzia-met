@@ -42,7 +42,7 @@ const LandingContainer = styled.div`
     vertical-align: middle;
   }
   .header {
-    width: 80%;
+    width: 60%;
     height: auto;
     margin: 0 auto;
     display: block;
@@ -75,8 +75,7 @@ const LandingContainer = styled.div`
   p {
     text-align: justify;
     text-shadow: gray;
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 26px;
   }
 
   .column {
@@ -97,6 +96,13 @@ const LandingContainer = styled.div`
   @media screen and (max-width: 1020px) {
     h1 {
       font-size: 50px;
+    }
+    .header {
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      margin-top: 1em;
     }
   }
   @media screen and (max-width: 1220px) and (min-width: 1020px) {

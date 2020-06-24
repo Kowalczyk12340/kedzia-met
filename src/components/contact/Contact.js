@@ -17,38 +17,48 @@ const ContactData = styled.div`
     margin: 0 auto;
   }
   .wrapper {
-    overflow: scroll;
     width: 100%;
-    font-size: 24px;
+    font-size: 22px;
     margin: 0 auto;
-  }
-  .wrapper .contact-data {
-    width: 80%;
-    height: auto;
+    overflow: hidden;
+    max-width: 100vh;
     margin: 0;
     padding: 0;
+    float: left;
+    height: 100vh;
+  }
+  .wrapper .contact-data {
+    width: 90%;
+    height: 100vh;
+    float: left;
+    max-width: 40vh;
+  }
+  .wrapper .div {
+    min-height: 60px;
   }
   .wrapper .contact-data .header {
-    width: 80%;
+    width: 70%;
     height: auto;
-    margin-top: 1.1em;
+    margin-top: 1em;
+    margin: 0 auto;
+  }
+  .wrapper .contact-data .info-wrapper {
+    display: inline;
+    padding: 8px;
+    text-align: center;
+    width: 60%;
   }
   .wrapper .contact-data .info {
-    display: inline-block;
-    padding: 8px;
+    display: inline;
+    padding: 6px;
+    margin-bottom: 5px;
   }
   .wrapper .contact-data .info a {
     color: white;
   }
-  .wrapper .contact-data .info-wrapper {
-    text-align: center;
-  }
-  .wrapper div {
-    min-height: 150px;
-  }
   .wrapper .contact-data {
     float: left;
-    width: 40%;
+    width: 50%;
     background: #e52d27; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
@@ -63,58 +73,45 @@ const ContactData = styled.div`
     color: white;
     height: 100vh;
   }
-  .wrapper .map {
+  .map {
+    float: left;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
-  @media only screen and (max-width: 600px) {
-    .wrapper {
-      max-height: 100%;
-    }
-    .contact-data {
-      max-height: 900px;
-    }
   }
   @media screen and (min-width: 421px) and (max-width: 570px) {
     .wrapper .contact-data {
       float: none;
       width: auto;
-      max-height: 700px;
     }
-    .wrapper {
-      min-height: 700px;
-    }
-  }
-  @media screen and (min-width: 391px) and (max-width: 420px) {
-    .wrapper {
-      max-height: 270%;
+    .wrapper .info-wrapper {
+      height: 100%;
+      font-size: 24px;
     }
     .wrapper .contact-data {
-      float: none;
-      margin-right: 0;
-      width: auto;
+      height: 100%;
     }
   }
+
   @media screen and (max-width: 390px) {
     .wrapper .contact-data {
       float: none;
       width: auto;
-      max-height: 2900px;
     }
-    .wrapper {
-      max-height: 270%;
+    .wrapper .info-wrapper {
+      height: 100%;
+      font-size: 24px;
+    }
+    .wrapper .contact-data {
+      height: 100%;
     }
   }
   @media screen and (min-width: 571px) and (max-width: 800px) {
     .wrapper .contact-data {
       float: none;
       width: auto;
-      max-height: 2500px;
       margin: 0 auto;
     }
     .wrapper {
-      min-height: 1000px;
+      font-size: 20px;
     }
     h4 {
       text-align: center;
@@ -125,13 +122,16 @@ const ContactData = styled.div`
       max-width: 300px;
       height: auto;
     }
+    .wrapper {
+      font-size: 20px;
+    }
   }
   h1 {
     text-align: center;
     text-shadow: grey;
     font-weight: bold;
     font-size: 34px;
-    text-decoration: underline;
+    text-decoration: none;
   }
   p {
     text-align: center;
@@ -139,10 +139,8 @@ const ContactData = styled.div`
     padding: 5px;
   }
   .contactDetails {
-    color: black;
     text-decoration: none;
     cursor: pointer;
-    margin-bottom: 10px;
   }
 `;
 class Contact extends Component {
@@ -160,8 +158,8 @@ class Contact extends Component {
         <div className="wrapper">
           <div className="contact-data">
             <img className="header" src={logo1} />
+            <h1>ZPHU KĘDZIA-MET</h1>
             <h3>Marek Kędzia</h3>
-            <h4>ZPHU KĘDZIA-MET</h4>
             <div className="info-wrapper">
               <div className="info">
                 <h3>Adres</h3>
@@ -170,6 +168,7 @@ class Contact extends Component {
                 <br />
                 98-215 Goszczanów
               </div>
+              <br />
               <div className="info">
                 <h3>Telefon</h3>
                 Modernizacja
@@ -181,6 +180,9 @@ class Contact extends Component {
                 <br /> <i className="fa fa-phone"></i>
                 <b>739 082 982</b>
               </div>
+              <br />
+            </div>
+            <div className="info-wrapper">
               <div className="info">
                 <h3>Adres E-mail</h3>
                 <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
@@ -189,13 +191,16 @@ class Contact extends Component {
                   kedzia-met@wp.pl
                 </a>
               </div>
+              <br />
               <div className="info">
-                <h4>Dostępność</h4>
+                <h3>Dostępność</h3>
                 Pon - Pt
                 <br /> 8:00 - 16:00
                 <br /> Sob - Ndz <br /> Nieczynne
               </div>
+              <br />
             </div>
+            <br />
           </div>
           <div className="map">
             <MapContainer />

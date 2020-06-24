@@ -352,6 +352,24 @@ const IMAGES = [
     thumbnailWidth: 320,
     thumbnailHeight: 212,
   },
+  {
+    src: "https://imgur.com/MKPwhux.jpg",
+    thumbnail: "https://imgur.com/MKPwhux.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+  },
+  {
+    src: "https://imgur.com/k0bFAuq.jpg",
+    thumbnail: "https://imgur.com/k0bFAuq.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+  },
+  {
+    src: "https://imgur.com/OXtGHa1.jpg",
+    thumbnail: "https://imgur.com/OXtGHa1.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+  },
 ];
 
 export const PhotoGallery = () => {

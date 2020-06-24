@@ -6,7 +6,7 @@ export class MapContainer extends Component {
     return (
       <Map
         google={this.props.google}
-        zoom={12}
+        zoom={13}
         initialCenter={{ lat: 51.753776, lng: 18.547402 }}
       >
         <Marker

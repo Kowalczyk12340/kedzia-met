@@ -49,7 +49,7 @@ const OffersItem = styled.div`
     float: left;
   }
   .description {
-    margin-top: 35px;
+    margin-top: 26px;
     margin-bottom: 35px;
     height: auto;
     background-color: rgba(250, 250, 250, 0.5);
@@ -60,11 +60,10 @@ const OffersItem = styled.div`
     text-align: justify;
     text-shadow: grey;
     font-weight: cursive;
-    font-size: 22px;
+    font-size: 20px;
     width: 90%;
     margin: 0 auto;
     padding: 20px;
-    font-size: 24px;
   }
   .weld {
     width: 100%;
@@ -74,7 +73,7 @@ const OffersItem = styled.div`
     color: white;
     margin: 1em;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 22px;
   }
   .fb {
     background-color: white;
@@ -113,11 +112,11 @@ const OffersItem = styled.div`
     border-right: none; /* Prevent double borders */
   }
 
-  .add1 {
-    color: black;
+  .add11 {
+    color: white;
     cursor: pointer;
     text-decoration: none;
-    font-weight: bolder;
+    font-size: 21px;
   }
 
   /* Clear floats (clearfix hack) */
@@ -154,12 +153,15 @@ const OffersItem = styled.div`
       font-weight: bold;
     }
     p {
-      font-size: 34px;
+      font-size: 26px;
     }
   }
   @media screen and (max-width: 1020px) {
     h1 {
       font-size: 50px;
+    }
+    p {
+      font-size: 30px;
     }
   }
   @media screen and (max-width: 1220px) and (min-width: 1020px) {
@@ -195,8 +197,8 @@ export const Offers = () => {
             </Link>
           </button>
           <button>
-            <Link className="add" to="#">
-              Tokarstwo
+            <Link className="add11" to="#">
+              Obróbka Skrawania
             </Link>
           </button>
         </div>
