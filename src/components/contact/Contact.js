@@ -9,7 +9,6 @@ const ContactData = styled.div`
   h3 {
     margin: 0;
   }
-
   h4 {
     align-content: center;
     text-align: center;
@@ -17,40 +16,33 @@ const ContactData = styled.div`
     font-weight: bold;
     margin: 0 auto;
   }
-
   .wrapper {
-    overflow: hidden;
+    overflow: scroll;
     width: 100%;
     font-size: 24px;
     margin: 0 auto;
   }
-
   .wrapper .contact-data {
     width: 80%;
     height: auto;
     margin: 0;
     padding: 0;
   }
-
   .wrapper .contact-data .header {
     width: 80%;
     height: auto;
     margin-top: 1.1em;
   }
-
   .wrapper .contact-data .info {
     display: inline-block;
     padding: 8px;
   }
-
   .wrapper .contact-data .info a {
     color: white;
   }
-
   .wrapper .contact-data .info-wrapper {
     text-align: center;
   }
-
   .wrapper div {
     min-height: 150px;
   }
@@ -76,17 +68,14 @@ const ContactData = styled.div`
     margin: 0;
     padding: 0;
   }
-
   @media only screen and (max-width: 600px) {
     .wrapper {
       max-height: 100%;
     }
-
     .contact-data {
       max-height: 900px;
     }
   }
-
   @media screen and (min-width: 421px) and (max-width: 570px) {
     .wrapper .contact-data {
       float: none;
@@ -117,7 +106,6 @@ const ContactData = styled.div`
       max-height: 270%;
     }
   }
-
   @media screen and (min-width: 571px) and (max-width: 800px) {
     .wrapper .contact-data {
       float: none;
@@ -132,14 +120,12 @@ const ContactData = styled.div`
       text-align: center;
     }
   }
-
   @media screen and (min-width: 800px) and (max-width: 960px) {
     .header {
       max-width: 300px;
       height: auto;
     }
   }
-
   h1 {
     text-align: center;
     text-shadow: grey;
@@ -152,7 +138,6 @@ const ContactData = styled.div`
     letter-spacing: initial;
     padding: 5px;
   }
-
   .contactDetails {
     color: black;
     text-decoration: none;
