@@ -6,7 +6,7 @@ import Contact from "./components/contact/Contact";
 import { PhotoGallery } from "./components/gallery/PhotoGallery";
 import { Orders } from "./components/orders/Orders";
 import { Offers } from "./components/Offers/Offers";
-import { Modernization } from "./components/modernization/Modernization";
+import Modernization from "./components/modernization/Modernization";
 import { Footer } from "./components/layout/Footer";
 import "./App.css";
 
@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Switch>
           <Route exact path="/offers" component={Offers} />
-          <Route exact path="/modernization" component={Modernization} />
+          <Route path="/modernization" component={Modernization} />
           <Route exact path="/gallery" component={PhotoGallery} />
           <Route exact path="/orders" component={Orders} />
           <Route exact path="/contact" component={Contact} />

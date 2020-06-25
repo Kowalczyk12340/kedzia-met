@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
@@ -106,76 +106,82 @@ const ModernizationItem = styled.div`
   }
 `;
 
-export const Modernization = () => {
-  return (
-    <ModernizationItem>
-      <h1>Modernizacja</h1>
-      <p>
-        Maszyny wykonywane są pod zamówienie klienta. Są to w większości maszyny
-        modernizowane. Wszystkie elementy są dokładnie piaskowane co wpływa na
-        jakość i trwałość wykonanej usługi. Szczegóły techniczne do uzgodnienia.
-      </p>
-      <h3>
-        <Link className="add" to="/gallery" className="add">
-          Przyczepy Rolnicze
-        </Link>
-      </h3>
-      <div className="row">
-        <div className="column">
-          <img className="photopage" src={przyczepa} />
+class Modernization extends Component {
+  render() {
+    window.scrollTo(0, 0);
+    return (
+      <ModernizationItem>
+        <h1>Modernizacja</h1>
+        <p>
+          Maszyny wykonywane są pod zamówienie klienta. Są to w większości
+          maszyny modernizowane. Wszystkie elementy są dokładnie piaskowane co
+          wpływa na jakość i trwałość wykonanej usługi. Szczegóły techniczne do
+          uzgodnienia.
+        </p>
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Przyczepy Rolnicze
+          </Link>
+        </h3>
+        <div className="row">
+          <div className="column">
+            <img className="photopage" src={przyczepa} />
+          </div>
+          <div className="column">
+            <img className="photopage" src={przyczepa2} />
+          </div>
         </div>
-        <div className="column">
-          <img className="photopage" src={przyczepa2} />
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Przyczepy do Bali
+          </Link>
+        </h3>
+        <div className="row">
+          <div className="column">
+            <img className="photopage" src={przyczepa1} />
+          </div>
+          <div className="column">
+            <img className="photopage" src={przyczepa3} />
+          </div>
         </div>
-      </div>
-      <h3>
-        <Link className="add" to="/gallery" className="add">
-          Przyczepy do Bali
-        </Link>
-      </h3>
-      <div className="row">
-        <div className="column">
-          <img className="photopage" src={przyczepa1} />
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Sadzarki
+          </Link>
+        </h3>
+        <div className="row">
+          <div className="column">
+            <img className="photopage" src={sadzarka} />
+          </div>
+          <div className="column">
+            <img className="photopage" src={sadzarka1} />
+          </div>
         </div>
-        <div className="column">
-          <img className="photopage" src={przyczepa3} />
+        <h3>
+          <Link className="add" to="/gallery" className="add">
+            Wały
+          </Link>
+        </h3>
+        <div className="row">
+          <div className="column">
+            <img className="photopage" src={wal} />
+          </div>
+          <div className="column">
+            <img className="photopage" src={wal1} />
+          </div>
         </div>
-      </div>
-      <h3>
-        <Link className="add" to="/gallery" className="add">
-          Sadzarki
-        </Link>
-      </h3>
-      <div className="row">
-        <div className="column">
-          <img className="photopage" src={sadzarka} />
-        </div>
-        <div className="column">
-          <img className="photopage" src={sadzarka1} />
-        </div>
-      </div>
-      <h3>
-        <Link className="add" to="/gallery" className="add">
-          Wały
-        </Link>
-      </h3>
-      <div className="row">
-        <div className="column">
-          <img className="photopage" src={wal} />
-        </div>
-        <div className="column">
-          <img className="photopage" src={wal1} />
-        </div>
-      </div>
-      <h3>Zapraszamy do współpracy!</h3>
-      <a href="https://m.facebook.com/K%C4%99dzia-Met-112339333860499/?ref=bookmarks">
-        <FontAwesomeIcon icon={faFacebookF} />
-      </a>
-      <br />
-      <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
-      <br />
-      <br />
-      <br />
-    </ModernizationItem>
-  );
-};
+        <h3>Zapraszamy do współpracy!</h3>
+        <a href="https://m.facebook.com/K%C4%99dzia-Met-112339333860499/?ref=bookmarks">
+          <FontAwesomeIcon icon={faFacebookF} />
+        </a>
+        <br />
+        <h7 className="fb-txt">Odwiedź naszą stronę Facebook-ową!</h7>
+        <br />
+        <br />
+        <br />
+      </ModernizationItem>
+    );
+  }
+}
+
+export default Modernization;

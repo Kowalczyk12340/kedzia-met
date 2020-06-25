@@ -67,6 +67,10 @@ const LandingOrders = styled.div`
     margin-left: 5%;
     margin-right: 5%;
   }
+  #info-paragraph {
+    margin: 0 auto;
+    text-align: center;
+  }
   .product {
     text-align: center;
     font-size: 20px;
@@ -125,8 +129,9 @@ const LandingOrders = styled.div`
   .centerr {
     margin: 0;
     position: absolute;
+    font-size: 22px;
     top: 50%;
-    left: 50%;
+    left: 35%;
     vertical-align: center;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -171,6 +176,7 @@ const LandingOrders = styled.div`
 `;
 
 export const Orders = () => {
+  window.scrollTo(0, 0);
   return (
     <LandingOrders>
       <h1>Zamówienia</h1>
@@ -186,12 +192,12 @@ export const Orders = () => {
         <div className="column">
           <p className="description">
             Maszyna służy do formowania zagonów i rozwijania agrowłókniny lub
-            folii .Przeznaczona jest do uprawy truskawki ogórka borówki itp.
+            folii. Przeznaczona jest do uprawy truskawki ogórka borówki itp.
             Dodatkowa można rozwinąć wąż do nawadniania.
             <br /> <b>Parametry techniczne:</b>
-            <br /> - szerokość folii, agrowłókniny – 1m.
-            <br /> - szerokość zagonu w przedziale 70-80cm. <br />- wysokość
-            zagonu w przedziale 10-15cm.
+            <br /> - szerokość folii, agrowłókniny – 1m
+            <br /> - szerokość zagonu w przedziale 70-80cm <br />- wysokość
+            zagonu w przedziale 10-15cm
           </p>
         </div>
       </div>
@@ -214,7 +220,7 @@ export const Orders = () => {
             <br />
             <b>Standardowe parametry techniczne:</b>
             <br />
-            – Szerokość robocza – 150 cm.
+            – Szerokość robocza – 150 cm
             <br />
             – Szerokość całkowita - 170 cm
             <br />
@@ -234,9 +240,7 @@ export const Orders = () => {
           <img className="photopage" src={podgarniacz2} />
         </div>
         <div className="column1">
-          <div className="centerr">
-            <p>Wykonywane pod indywidualne zamówienie.</p>
-          </div>
+          <div className="centerr">Wykonywane pod indywidualne zamówienie.</div>
         </div>
       </div>
       <h3>
@@ -256,7 +260,8 @@ export const Orders = () => {
             występujących w różnych rozmiarach i typach. Wszystkie maszyny są
             wykonywane na zlecenie według indywidualnych potrzeb. Mogą być
             wyposażone w układ zmiany kąta pracy, kosz, układ zraszania,
-            szczotkę boczną oraz kompensację docisku.
+            szczotkę boczną oraz kompensację docisku. Więcej modeli do
+            obejrzenia w galerii.
           </p>
         </div>
       </div>
@@ -270,20 +275,18 @@ export const Orders = () => {
           <img className="photopage" src={konstrukcja} />
         </div>
         <div className="column1">
-          <div className="centerr">
-            <p>Wykonywane pod indywidualne zamówienie.</p>
-          </div>
+          <div className="centerr">Wykonywane pod indywidualne zamówienie.</div>
         </div>
       </div>
 
       <br />
       <br />
       <br />
-      <p>
+      <p id="info-paragraph">
         Więcej informacji co do zamówień uzyskacie Państwo mailowo lub
-        telefonicznie, wszystkie informacje, podane są w zakładce{" "}
+        telefonicznie, wszystkie informacje podane są w zakładce{" "}
         <Link className="add" to="/contact" className="navlink">
-          Kontakt
+          Kontakt.
         </Link>
       </p>
       <br />

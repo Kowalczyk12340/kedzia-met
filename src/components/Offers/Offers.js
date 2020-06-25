@@ -55,6 +55,7 @@ const OffersItem = styled.div`
     background-color: rgba(250, 250, 250, 0.5);
     color: black;
     border-radius: 5rem;
+    font-size: 24px;
   }
   p {
     text-align: justify;
@@ -74,6 +75,10 @@ const OffersItem = styled.div`
     margin: 1em;
     text-decoration: none;
     font-size: 22px;
+  }
+  .add1 {
+    color: black;
+    text-decoration: none;
   }
   .fb {
     background-color: white;
@@ -117,6 +122,7 @@ const OffersItem = styled.div`
     cursor: pointer;
     text-decoration: none;
     font-size: 21px;
+    text-align: center;
   }
 
   /* Clear floats (clearfix hack) */
@@ -204,20 +210,19 @@ export const Offers = () => {
         </div>
         <div className="description">
           <p>
-            Oferujemy wiele rozmaitych usług, takich jak modernizacja i
-            renowacja maszyn rolniczych, spawalnictwo, tokarstwo, zamawianie
-            części potrzebnych dla naszych klientów, oraz tworzenie różnych
-            metalowych konstrukcji, wiele wykonanych i zrenomowanych przez nas
-            maszyn możecie znaleźć Państwo w zakładce{" "}
+            Oferujemy usługi takie jak modernizacja i renowacja maszyn
+            rolniczych, spawalnictwo, tokarstwo, zamawianie części potrzebnych
+            dla naszych klientów oraz tworzenie konstrukcji stalowych. Wiele
+            wykonanych i zrenemowanych przez nas maszyn możecie znaleźć Państwo
+            w zakładce{" "}
             <Link className="add1" to="/gallery">
               Galeria
             </Link>
             .
           </p>
           <p>
-            Rzetelnie wykonujemy swoją pracę, co pozwala nam się rozwijać i
-            zyskiwać nowych klientów. Zapraszamy do obejrzenia naszej strony
-            internetowej.
+            Jakość wykonanej pracy i dbałość o szczegóły przyczynia się do
+            zwiększającej liczby nowych klientów.
           </p>
         </div>
         <div className="fb">

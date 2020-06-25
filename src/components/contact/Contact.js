@@ -6,9 +6,19 @@ import MapContainer from "./MapContainer";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const ContactData = styled.div`
+  .wrapper {
+    display: inline;
+  }
+  .info-wrapper {
+    display: flex;
+  }
+  .info {
+    margin: 0 auto;
+  }
   .header {
     height: auto;
-    width: 15em;
+    width: 70%;
+    margin: 0 auto;
   }
   .contact-data a {
     color: white;
@@ -16,7 +26,9 @@ const ContactData = styled.div`
   }
 
   .contact-data {
-    padding: 10px;
+    padding: 16px;
+    width: 30%;
+    font-size: 36px;
     color: white;
     background: #e52d27; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -35,24 +47,46 @@ const ContactData = styled.div`
     .contact-data {
       min-height: 100vh;
       float: left;
-      font-size: 18px;
+      font-size: 17px;
       margin-bottom: 30px;
     }
     .map {
       float: left;
+      min-height: 100vh;
     }
   }
   @media screen and (min-width: 366px) and (max-width: 649px) {
+    .header {
+      width: 70%;
+    }
     .contact-data {
-      font-size: 24px;
+      font-size: 22px;
+      min-height: 100vh;
+      display: block;
+      width: 100%;
+    }
+    .map {
+      display: grid;
+    }
+    .info-wrapper {
+      display: grid;
     }
   }
   @media screen and (max-width: 365px) {
     .header {
-      width: 12em;
+      width: 70%;
     }
     .contact-data {
-      font-size: 24px;
+      font-size: 22px;
+      min-height: 100vh;
+      display: block;
+      width: 100%;
+    }
+    .map {
+      display: grid;
+    }
+    .info-wrapper {
+      display: grid;
     }
   }
 `;
@@ -81,7 +115,17 @@ class Contact extends Component {
                 <br />
                 98-215 Goszczanów
               </div>
+              <div className="info">
+                <h3>Adres E-mail</h3>
+                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+
+                <a className="contactDetails" href="#">
+                  kedzia-met@wp.pl
+                </a>
+              </div>
               <br />
+            </div>
+            <div className="info-wrapper">
               <div className="info">
                 <h3>Telefon</h3>
                 Modernizacja
@@ -92,17 +136,6 @@ class Contact extends Component {
                 Zamówienia
                 <br /> <i className="fa fa-phone"></i>
                 <b>739 082 982</b>
-              </div>
-              <br />
-            </div>
-            <div className="info-wrapper">
-              <div className="info">
-                <h3>Adres E-mail</h3>
-                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-
-                <a className="contactDetails" href="#">
-                  kedzia-met@wp.pl
-                </a>
               </div>
               <br />
               <div className="info">
