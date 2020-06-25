@@ -195,9 +195,9 @@ export const Orders = () => {
             folii. Przeznaczona jest do uprawy truskawki ogórka borówki itp.
             Dodatkowa można rozwinąć wąż do nawadniania.
             <br /> <b>Parametry techniczne:</b>
-            <br /> - szerokość folii, agrowłókniny – 1m
-            <br /> - szerokość zagonu w przedziale 70-80cm <br />- wysokość
-            zagonu w przedziale 10-15cm
+            <br /> - szerokość folii, agrowłókniny – 1 m
+            <br /> - szerokość zagonu w przedziale 70-80 cm <br />- wysokość
+            zagonu w przedziale 10-15 cm
           </p>
         </div>
       </div>
