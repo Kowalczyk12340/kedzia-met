@@ -6,59 +6,18 @@ import MapContainer from "./MapContainer";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const ContactData = styled.div`
-  h3 {
-    margin: 0;
-  }
-  h4 {
-    align-content: center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    margin: 0 auto;
-  }
-  .wrapper {
-    width: 100%;
-    font-size: 22px;
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 100vh;
-    margin: 0;
-    padding: 0;
-    float: left;
-    height: 100vh;
-  }
-  .wrapper .contact-data {
-    width: 90%;
-    height: 100vh;
-    float: left;
-    max-width: 40vh;
-  }
-  .wrapper .div {
-    min-height: 60px;
-  }
-  .wrapper .contact-data .header {
-    width: 70%;
+  .header {
     height: auto;
-    margin-top: 1em;
-    margin: 0 auto;
+    width: 15em;
   }
-  .wrapper .contact-data .info-wrapper {
-    display: inline;
-    padding: 8px;
-    text-align: center;
-    width: 60%;
-  }
-  .wrapper .contact-data .info {
-    display: inline;
-    padding: 6px;
-    margin-bottom: 5px;
-  }
-  .wrapper .contact-data .info a {
+  .contact-data a {
     color: white;
+    text-decoration: none;
   }
-  .wrapper .contact-data {
-    float: left;
-    width: 50%;
+
+  .contact-data {
+    padding: 10px;
+    color: white;
     background: #e52d27; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
@@ -70,77 +29,31 @@ const ContactData = styled.div`
       #b31217,
       #e52d27
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-    height: 100vh;
-  }
-  .map {
-    float: left;
-    overflow: hidden;
-  }
-  @media screen and (min-width: 421px) and (max-width: 570px) {
-    .wrapper .contact-data {
-      float: none;
-      width: auto;
-    }
-    .wrapper .info-wrapper {
-      height: 100%;
-      font-size: 24px;
-    }
-    .wrapper .contact-data {
-      height: 100%;
-    }
   }
 
-  @media screen and (max-width: 390px) {
-    .wrapper .contact-data {
-      float: none;
-      width: auto;
+  @media screen and (min-width: 650px) {
+    .contact-data {
+      min-height: 100vh;
+      float: left;
+      font-size: 18px;
+      margin-bottom: 30px;
     }
-    .wrapper .info-wrapper {
-      height: 100%;
+    .map {
+      float: left;
+    }
+  }
+  @media screen and (min-width: 366px) and (max-width: 649px) {
+    .contact-data {
       font-size: 24px;
     }
-    .wrapper .contact-data {
-      height: 100%;
-    }
   }
-  @media screen and (min-width: 571px) and (max-width: 800px) {
-    .wrapper .contact-data {
-      float: none;
-      width: auto;
-      margin: 0 auto;
-    }
-    .wrapper {
-      font-size: 20px;
-    }
-    h4 {
-      text-align: center;
-    }
-  }
-  @media screen and (min-width: 800px) and (max-width: 960px) {
+  @media screen and (max-width: 365px) {
     .header {
-      max-width: 300px;
-      height: auto;
+      width: 12em;
     }
-    .wrapper {
-      font-size: 20px;
+    .contact-data {
+      font-size: 24px;
     }
-  }
-  h1 {
-    text-align: center;
-    text-shadow: grey;
-    font-weight: bold;
-    font-size: 34px;
-    text-decoration: none;
-  }
-  p {
-    text-align: center;
-    letter-spacing: initial;
-    padding: 5px;
-  }
-  .contactDetails {
-    text-decoration: none;
-    cursor: pointer;
   }
 `;
 class Contact extends Component {
