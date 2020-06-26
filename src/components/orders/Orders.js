@@ -192,8 +192,8 @@ export const Orders = () => {
         <div className="column">
           <p className="description">
             Maszyna służy do formowania zagonów i rozwijania agrowłókniny lub
-            folii. Przeznaczona jest do uprawy truskawki ogórka borówki itp.
-            Dodatkowa można rozwinąć wąż do nawadniania.
+            folii. Przeznaczona jest do uprawy truskawki, ogórka, borówki itp.
+            Dodatkowo można rozwinąć wąż do nawadniania.
             <br /> <b>Parametry techniczne:</b>
             <br /> - szerokość folii, agrowłókniny – 1 m
             <br /> - szerokość zagonu w przedziale 70-80 cm <br />- wysokość
@@ -261,7 +261,10 @@ export const Orders = () => {
             wykonywane na zlecenie według indywidualnych potrzeb. Mogą być
             wyposażone w układ zmiany kąta pracy, kosz, układ zraszania,
             szczotkę boczną oraz kompensację docisku. Więcej modeli do
-            obejrzenia w galerii.
+            obejrzenia w zakładce{" "}
+            <Link className="add" to="/contact" className="navlink">
+              Galeria.
+            </Link>
           </p>
         </div>
       </div>

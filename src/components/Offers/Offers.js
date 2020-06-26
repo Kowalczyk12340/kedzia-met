@@ -23,7 +23,7 @@ const OffersItem = styled.div`
   }
   .title {
     border-radius: 19%;
-    background-color: rgba(251, 251, 251, 0.4);
+    background-color: rgba(251, 251, 251, 0.3);
     width: 100%;
   }
   h1 {
@@ -213,7 +213,7 @@ export const Offers = () => {
             Oferujemy usługi takie jak modernizacja i renowacja maszyn
             rolniczych, spawalnictwo, tokarstwo, zamawianie części potrzebnych
             dla naszych klientów oraz tworzenie konstrukcji stalowych. Wiele
-            wykonanych i zrenemowanych przez nas maszyn możecie znaleźć Państwo
+            wykonanych i zrenomowanych przez nas maszyn możecie znaleźć Państwo
             w zakładce{" "}
             <Link className="add1" to="/gallery">
               Galeria

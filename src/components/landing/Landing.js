@@ -24,7 +24,7 @@ const LandingContainer = styled.div`
   }
   .title {
     border-radius: 19%;
-    background-color: rgba(251, 251, 251, 0.4);
+    background-color: rgba(251, 251, 251, 0.3);
     width: 100%;
   }
   h1 {
