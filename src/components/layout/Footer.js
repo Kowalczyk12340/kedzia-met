@@ -20,7 +20,7 @@ const FooterItem = styled.div`
       margin: 0 auto;
       background: #333;
       color: white;
-      padding: 0.5rem;
+      padding: 0.4rem;
       text-align: center;
     }
   }

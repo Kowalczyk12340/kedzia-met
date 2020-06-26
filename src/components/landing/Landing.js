@@ -32,7 +32,7 @@ const LandingContainer = styled.div`
     text-shadow: grey;
     font-weight: bold;
     font-size: 100px;
-    color: white;
+    color: black;
     width: 100%;
     margin: 0;
     vertical-align: center;
