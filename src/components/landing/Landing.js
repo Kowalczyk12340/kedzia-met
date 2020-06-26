@@ -24,7 +24,7 @@ const LandingContainer = styled.div`
   }
   .title {
     border-radius: 19%;
-    background-color: rgba(251, 251, 251, 0.3);
+    background-color: rgba(251, 251, 251, 0.35);
     width: 100%;
   }
   h1 {
@@ -32,7 +32,7 @@ const LandingContainer = styled.div`
     text-shadow: grey;
     font-weight: bold;
     font-size: 100px;
-    color: black;
+    color: white;
     width: 100%;
     margin: 0;
     vertical-align: center;

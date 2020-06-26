@@ -8,7 +8,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const ContactData = styled.div`
   .wrapper {
     display: inline;
-    width: 100%;
+    max-width: 100%;
   }
   .info-wrapper {
     display: flex;
@@ -28,13 +28,11 @@ const ContactData = styled.div`
 
   .map {
     max-width: 60%;
-    justify-content: flex-end;
-    overflow: visible;
   }
 
   .contact-data {
     padding: 18px;
-    max-width: 40%;
+    width: 40%;
     font-size: 36px;
     color: white;
     background: #e52d27; /* fallback for old browsers */
