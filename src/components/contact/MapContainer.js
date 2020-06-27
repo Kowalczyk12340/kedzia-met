@@ -8,6 +8,7 @@ export class MapContainer extends Component {
         google={this.props.google}
         zoom={13}
         initialCenter={{ lat: 51.753776, lng: 18.547402 }}
+        containerStyle={this.props.containerStyle}
       >
         <Marker
           onClick={this.onMarkerClick}

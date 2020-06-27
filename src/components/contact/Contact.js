@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import logo1 from "../../images/kedzia.png";
 import MapContainer from "./MapContainer";
+import { useMediaPredicate } from "react-media-hook";
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const containerStyle = {
+  width: "58%",
+  maxHeight: "92vh",
+};
+
+const biggerContainerStyle = {
+  width: "100%",
+  maxHeight: "92vh",
+};
 
 const ContactData = styled.div`
   .wrapper {
@@ -26,10 +35,6 @@ const ContactData = styled.div`
     text-decoration: none;
   }
 
-  .map {
-    max-width: 60%;
-  }
-
   .contact-data {
     padding: 18px;
     width: 40%;
@@ -50,7 +55,7 @@ const ContactData = styled.div`
 
   @media screen and (min-width: 650px) {
     .contact-data {
-      min-height: 100vh;
+      min-height: 89vh;
       float: left;
       font-size: 17px;
       margin-bottom: 30px;
@@ -69,9 +74,6 @@ const ContactData = styled.div`
       min-height: 100vh;
       display: block;
       width: 100%;
-    }
-    .map {
-      display: grid;
     }
     .info-wrapper {
       display: grid;
@@ -95,71 +97,63 @@ const ContactData = styled.div`
     }
   }
 `;
-class Contact extends Component {
-  static defaultProps = {
-    center: {
-      lat: 51.714031,
-      lng: 18.547956,
-    },
-    zoom: 12,
-  };
-
-  render() {
-    return (
-      <ContactData>
-        <div className="wrapper">
-          <div className="contact-data">
-            <img className="header" src={logo1} />
-            <h1>ZPHU KĘDZIA-MET</h1>
-            <h3>Marek Kędzia</h3>
-            <div className="info-wrapper">
-              <div className="info">
-                <h3>Adres</h3>
-                <i class="fa fa-home"></i>
-                Wacławów 24
-                <br />
-                98-215 Goszczanów
-              </div>
-              <div className="info">
-                <h3>Adres E-mail</h3>
-                <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-
-                <a className="contactDetails" href="#">
-                  kedzia-met@wp.pl
-                </a>
-              </div>
+export const Contact = () => {
+  const biggerThan600 = useMediaPredicate("(min-width: 650px)");
+  return (
+    <ContactData>
+      <div className="wrapper">
+        <div className="contact-data">
+          <img className="header" src={logo1} />
+          <h1>ZPHU KĘDZIA-MET</h1>
+          <h3>Marek Kędzia</h3>
+          <div className="info-wrapper">
+            <div className="info">
+              <h3>Adres</h3>
+              <i class="fa fa-home"></i>
+              Wacławów 24
               <br />
+              98-215 Goszczanów
             </div>
-            <div className="info-wrapper">
-              <div className="info">
-                <h3>Telefon</h3>
-                Modernizacja
-                <br />
-                <i className="fa fa-phone"></i>
-                <b>608 473 406</b>
-                <br />
-                Zamówienia
-                <br /> <i className="fa fa-phone"></i>
-                <b>739 082 982</b>
-              </div>
-              <br />
-              <div className="info">
-                <h3>Dostępność</h3>
-                Pon - Pt
-                <br /> 8:00 - 16:00
-                <br /> Sob - Ndz <br /> Nieczynne
-              </div>
-              <br />
+            <div className="info">
+              <h3>Adres E-mail</h3>
+              <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+
+              <a className="contactDetails" href="#">
+                kedzia-met@wp.pl
+              </a>
             </div>
             <br />
           </div>
-          <div className="map">
-            <MapContainer />
+          <div className="info-wrapper">
+            <div className="info">
+              <h3>Telefon</h3>
+              Modernizacja
+              <br />
+              <i className="fa fa-phone"></i>
+              <b>608 473 406</b>
+              <br />
+              Zamówienia
+              <br /> <i className="fa fa-phone"></i>
+              <b>739 082 982</b>
+            </div>
+            <br />
+            <div className="info">
+              <h3>Dostępność</h3>
+              Pon - Pt
+              <br /> 8:00 - 16:00
+              <br /> Sob - Ndz <br /> Nieczynne
+            </div>
+            <br />
           </div>
+          <br />
         </div>
-      </ContactData>
-    );
-  }
-}
-
-export default Contact;
+        <div className="map">
+          {biggerThan600 && <MapContainer containerStyle={containerStyle} />}
+          {!biggerThan600 && (
+            <MapContainer containerStyle={biggerContainerStyle} />
+          )}
+        </div>
+      </div>
+    </ContactData>
+  );
+};
